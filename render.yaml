@@ -4,11 +4,9 @@ services:
     env: python
     buildCommand: "pip install -r requirements-backend.txt"
     startCommand: "cd webapp_backend && uvicorn main:app --host 0.0.0.0 --port $PORT"
-    plan: free
     
   - type: web
     name: nepal-office-tracker-frontend
     env: static
     buildCommand: "cd webapp_frontend && npm install && npm run build"
     staticPublishPath: ./webapp_frontend/build
-    plan: free
