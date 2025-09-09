@@ -3,7 +3,7 @@
 import axios from 'axios';
 import { District, OfficeType, Office, Service, Visit, Rating, ServiceStatus, OfficeAnalytics } from '../types';
 
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'https://nepal-office-tracker-1.onrender.com';
 
 const api = axios.create({
   baseURL: API_BASE_URL,

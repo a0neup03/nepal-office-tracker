@@ -23,7 +23,7 @@ jobs:
       - name: Build React app
         working-directory: webapp_frontend
         env:
-          REACT_APP_API_BASE_URL: https://nepal-office-tracker-production.up.railway.app
+          REACT_APP_API_BASE_URL: https://nepal-office-tracker-1.onrender.com
         run: npm run build
         
       - name: Deploy to GitHub Pages
