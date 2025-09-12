@@ -1,0 +1,323 @@
+[
+  {
+    "id": "event_09",
+    "title": "Home Minister Resigns After 19 Student Deaths",
+    "description": "Your Home Minister has resigned after police opened fire on student protesters, killing 19 young people. Angry crowds are now marching toward Singha Durbar threatening to burn the Constituent Assembly building. International media is watching closely.",
+    "source_article": "Based on various student movement casualties in Nepal's history",
+    "image_search_query": "Nepal student protest Singha Durbar",
+    "image_source_credit": "Nepal News Agency",
+    "tags": ["crisis", "protest", "violence"],
+    "historical_context": "Echoes the 1990 and 2006 movements where government response to protests determined regime survival.",
+    "prerequisites": { "min_stability": 0, "max_stability": 70, "required_turn": 3 },
+    "choices": [
+      {
+        "text": "Deploy army to protect Singha Durbar with shoot-on-sight orders",
+        "outcome": "Buildings are protected but more deaths occur. International condemnation pours in and you're labeled a dictator. Your own party questions your leadership.",
+        "is_constitutional": false,
+        "constitutional_implication": "Using excessive force violates fundamental rights under Articles 16 and 17 of the Constitution.",
+        "effects": { "stability": -40, "economy": -20, "morale": -35, "stress": 30 }
+      },
+      {
+        "text": "Allow protesters to burn buildings while ensuring ambulances and fire services are ready",
+        "outcome": "Several government buildings burn, but no more deaths occur. You're criticized as weak but praised for valuing human life over property.",
+        "is_constitutional": true,
+        "constitutional_implication": "Prioritizing life over property aligns with constitutional protection of right to life under Article 16.",
+        "effects": { "stability": -20, "economy": -15, "morale": 10, "stress": 15 }
+      },
+      {
+        "text": "Personally go to the protest site with a megaphone to address the crowd",
+        "outcome": "A bold move that either makes you a hero or gets you attacked. Your security detail is terrified, but some protesters listen.",
+        "is_constitutional": true,
+        "constitutional_implication": "Direct democratic engagement respects citizens' right to peaceful assembly and petition government.",
+        "effects": { "stability": 5, "economy": -10, "morale": 20, "stress": 10 }
+      },
+      {
+        "text": "Offer massive compensation to families and promise to prosecute police officers",
+        "outcome": "Families appreciate the gesture but critics say you're buying peace. Opposition questions where the money will come from.",
+        "is_constitutional": true,
+        "constitutional_implication": "Providing compensation and ensuring accountability follows rule of law principles.",
+        "effects": { "stability": 10, "economy": -25, "morale": 15, "stress": 8 }
+      }
+    ]
+  },
+  {
+    "id": "event_10",
+    "title": "The Great Salary Dilemma",
+    "description": "Civil servants are threatening a nationwide strike demanding 100% salary increase. Your Finance Minister warns this will bankrupt the government and force massive borrowing from China. Your own MPs are pressuring you - many have relatives in government jobs.",
+    "source_article": "Based on recurring civil service salary negotiations in Nepal",
+    "image_search_query": "Nepal civil servants protest salary",
+    "image_source_credit": "Kantipur Publications",
+    "tags": ["economy", "corruption"],
+    "historical_context": "Reflects the perpetual challenge of balancing public sector wages with fiscal responsibility in developing economies.",
+    "prerequisites": { "min_economy": 0, "max_economy": 60, "required_turn": 4 },
+    "choices": [
+      {
+        "text": "Give the full salary increase and secretly take a loan from Chinese development banks",
+        "outcome": "Civil servants celebrate, but you've mortgaged Nepal's future. Opposition will eventually discover the hidden Chinese debt with impossible conditions.",
+        "is_constitutional": false,
+        "constitutional_implication": "Secret foreign borrowing violates parliamentary oversight of public finances under Article 59.",
+        "effects": { "stability": 15, "economy": -35, "morale": 20, "stress": 18 }
+      },
+      {
+        "text": "Offer 30% increase but only for those who pass new performance evaluations",
+        "outcome": "Merit-based approach angers unions but impresses development partners. Half the civil service fails the evaluation, causing administrative chaos.",
+        "is_constitutional": true,
+        "constitutional_implication": "Merit-based public service follows constitutional principles of good governance.",
+        "effects": { "stability": -10, "economy": -15, "morale": -5, "stress": 12 }
+      },
+      {
+        "text": "Propose that civil servants get stock options in a new 'Nepal Development Corporation'",
+        "outcome": "A bizarre capitalist solution that confuses everyone. Economists laugh, but some young bureaucrats are intrigued by this 'startup government' approach.",
+        "is_constitutional": true,
+        "constitutional_implication": "Innovation in public service delivery is constitutionally permissible under economic policy provisions.",
+        "effects": { "stability": -5, "economy": 10, "morale": 5, "stress": 8 }
+      }
+    ]
+  },
+  {
+    "id": "event_11",
+    "title": "The Doctor Exodus Crisis",
+    "description": "500 doctors have applied for foreign work permits this month alone. Your Health Minister reports that 3 district hospitals may have to close. Meanwhile, a US hospital chain offers to hire 1000 Nepali doctors immediately with triple salaries.",
+    "source_article": "Based on ongoing brain drain crisis in Nepal's health sector",
+    "image_search_query": "Nepal doctors leaving abroad migration",
+    "image_source_credit": "Nepal Medical Association",
+    "tags": ["brain_drain", "health"],
+    "historical_context": "Reflects Nepal's chronic brain drain problem, accelerated during COVID-19 when healthcare workers faced both risks and low pay.",
+    "prerequisites": { "min_economy": 0, "max_economy": 80, "required_turn": 5 },
+    "choices": [
+      {
+        "text": "Ban doctors from leaving the country for 5 years after graduation",
+        "outcome": "Medical colleges empty as students refuse to enroll. The few remaining doctors organize strikes. International human rights groups condemn you.",
+        "is_constitutional": false,
+        "constitutional_implication": "Restricting freedom of movement violates Article 17 of the Constitution guaranteeing right to movement.",
+        "effects": { "stability": -25, "economy": -10, "morale": -30, "stress": 20 }
+      },
+      {
+        "text": "Triple doctor salaries by cutting education and infrastructure budgets",
+        "outcome": "Doctors stay but schools close and roads crumble. You've created a medical aristocracy while other sectors collapse.",
+        "is_constitutional": true,
+        "constitutional_implication": "Budget reallocation is within executive powers, though may impact other constitutional obligations.",
+        "effects": { "stability": -15, "economy": -20, "morale": 5, "stress": 15 }
+      },
+      {
+        "text": "Partner with the US hospital chain to create a 'Nepal-USA Medical Exchange' program",
+        "outcome": "Doctors get foreign experience but promise to return. It's a gamble - will they actually come back or is this just organized brain drain?",
+        "is_constitutional": true,
+        "constitutional_implication": "International cooperation in healthcare development aligns with foreign policy objectives.",
+        "effects": { "stability": 10, "economy": 5, "morale": 15, "stress": 12 }
+      },
+      {
+        "text": "Recruit foreign doctors from countries with similar economic conditions",
+        "outcome": "Pakistani and Bangladeshi doctors arrive, but face language barriers and cultural resistance. Some excel, others struggle with local customs.",
+        "is_constitutional": true,
+        "constitutional_implication": "Hiring foreign professionals is permissible under economic policy provisions of the Constitution.",
+        "effects": { "stability": -5, "economy": 10, "morale": -10, "stress": 8 }
+      }
+    ]
+  },
+  {
+    "id": "event_12",
+    "title": "The Great Jobs vs Migration Dilemma",
+    "description": "Your Employment Ministry presents two options: spend $50 million to create 1,000 sustainable jobs in Nepal, or spend $10 million to facilitate 10,000 workers to migrate to Gulf countries. Remittances could boost economy, but you'll lose an entire generation.",
+    "source_article": "Based on Nepal's dual challenge of job creation vs labor migration",
+    "image_search_query": "Nepal workers Gulf migration airport departure",
+    "image_source_credit": "Tribhuvan International Airport",
+    "tags": ["migration", "economy", "youth"],
+    "historical_context": "Captures Nepal's reliance on remittances (25% of GDP) while facing domestic unemployment crisis.",
+    "prerequisites": { "min_economy": 20, "max_economy": 100, "required_turn": 6 },
+    "choices": [
+      {
+        "text": "Invest everything in domestic job creation and ban labor migration",
+        "outcome": "Unemployment rises initially but some quality jobs emerge. Families dependent on remittances suffer. Opposition calls you 'anti-poor'.",
+        "is_constitutional": false,
+        "constitutional_implication": "Banning migration violates constitutional right to movement and employment choice under Article 17.",
+        "effects": { "stability": -20, "economy": -15, "morale": -10, "stress": 18 }
+      },
+      {
+        "text": "Facilitate mass migration - 'export human resources for national income'",
+        "outcome": "Remittances flood in, economy looks good on paper. But villages empty out, elderly parents die alone, and Nepal becomes a labor-export economy.",
+        "is_constitutional": true,
+        "constitutional_implication": "Supporting employment opportunities abroad respects freedom of movement and employment.",
+        "effects": { "stability": 15, "economy": 25, "morale": -15, "stress": 10 }
+      },
+      {
+        "text": "Create a bizarre 'circular migration' program where workers rotate every 2 years",
+        "outcome": "A complex system that confuses everyone. Some families like the predictability, others hate the constant separation. Bureaucratic nightmare to manage.",
+        "is_constitutional": true,
+        "constitutional_implication": "Innovative employment programs fall within government's economic development mandate.",
+        "effects": { "stability": 5, "economy": 15, "morale": 5, "stress": 12 }
+      },
+      {
+        "text": "Tax remittances heavily to fund domestic job creation",
+        "outcome": "Migrant workers feel betrayed - they're funding development but can't benefit. Underground money transfer systems emerge to avoid taxes.",
+        "is_constitutional": true,
+        "constitutional_implication": "Taxation of foreign income is within government's fiscal powers under Article 60.",
+        "effects": { "stability": -10, "economy": 10, "morale": -20, "stress": 15 }
+      }
+    ]
+  },
+  {
+    "id": "event_13",
+    "title": "Your Son's Harvard Admission Scandal",
+    "description": "Media discovers your son got into Harvard with a $500,000 'donation' just as you're promoting education reforms for underprivileged children. The irony is lost on no one. International universities are scrutinizing all Nepali politician's children applications.",
+    "source_article": "Inspired by various education scandals involving politician families",
+    "image_search_query": "Harvard University admission scandal",
+    "image_source_credit": "Harvard University Archives",
+    "tags": ["corruption", "family", "education"],
+    "historical_context": "Reflects the global phenomenon of elite capture of educational opportunities while promoting equality.",
+    "prerequisites": { "min_stability": 30, "max_stability": 100, "required_turn": 7 },
+    "choices": [
+      {
+        "text": "Claim the donation was for 'Nepal-Harvard cultural exchange program'",
+        "outcome": "Nobody believes you. Harvard returns the money to avoid controversy. Your son's admission is revoked and he's devastated. Opposition has field day.",
+        "is_constitutional": true,
+        "constitutional_implication": "While not illegal, this undermines public trust in leadership integrity expected in democratic governance.",
+        "effects": { "stability": -30, "economy": 0, "morale": -25, "stress": 20 }
+      },
+      {
+        "text": "Proudly defend it: 'My son deserves the best education money can buy'",
+        "outcome": "Honest but tone-deaf. You become a symbol of elite privilege. Students burn your effigy at colleges across Nepal.",
+        "is_constitutional": true,
+        "constitutional_implication": "Legal right to spend personal wealth, but politically damaging to public service credibility.",
+        "effects": { "stability": -35, "economy": -5, "morale": -30, "stress": 25 }
+      },
+      {
+        "text": "Withdraw your son from Harvard and use the money for 100 scholarships for poor students",
+        "outcome": "A redemption story that the media loves. Your son hates you temporarily, but becomes a social worker. Opposition struggles to attack this.",
+        "is_constitutional": true,
+        "constitutional_implication": "Using wealth for public good aligns with social justice principles in the Constitution's directive principles.",
+        "effects": { "stability": 20, "economy": 5, "morale": 25, "stress": -5 }
+      },
+      {
+        "text": "Blame your wife: 'She did it without my knowledge'",
+        "outcome": "Classic political deflection that fools no one. Your wife gives explosive interviews. Your marriage counselor becomes the most powerful person in Nepal.",
+        "is_constitutional": true,
+        "constitutional_implication": "While not unconstitutional, this damages public trust and demonstrates poor leadership character.",
+        "effects": { "stability": -25, "economy": 0, "morale": -20, "stress": 22 }
+      }
+    ]
+  },
+  {
+    "id": "event_14",
+    "title": "The Everest Permit Corruption Goldmine",
+    "description": "Tourism officials reveal that fake Everest permits are being sold for $50,000 each to unqualified climbers. Meanwhile, legitimate climbers wait months for permits. Your Tourism Minister owns the company processing applications. Deaths on Everest are increasing.",
+    "source_article": "Based on recurring issues with Everest commercialization and permit irregularities",
+    "image_search_query": "Mount Everest permit office Nepal",
+    "image_source_credit": "Department of Tourism Nepal",
+    "tags": ["corruption", "tourism", "safety"],
+    "historical_context": "Reflects the tension between Nepal's dependence on Everest tourism revenue and the need for proper regulation and safety.",
+    "prerequisites": { "min_economy": 30, "max_economy": 100, "required_turn": 8 },
+    "choices": [
+      {
+        "text": "Protect your Tourism Minister - 'He's being framed by jealous competitors'",
+        "outcome": "More bodies pile up on Everest. International climbing community boycotts Nepal. Your Tourism Minister buys a mansion in Dubai.",
+        "is_constitutional": false,
+        "constitutional_implication": "Protecting corruption violates constitutional obligation to ensure good governance and accountability.",
+        "effects": { "stability": -30, "economy": -25, "morale": -35, "stress": 25 }
+      },
+      {
+        "text": "Nationalize Everest permits and create a state-run climbing certification program",
+        "outcome": "Bureaucratic nightmare where permits take 2 years to process. Corruption moves underground. Everest becomes accessible only to the most patient climbers.",
+        "is_constitutional": true,
+        "constitutional_implication": "Government can regulate tourism activities under its regulatory powers, though efficiency matters for economic impact.",
+        "effects": { "stability": 10, "economy": -15, "morale": 5, "stress": 12 }
+      },
+      {
+        "text": "Partner with international climbing organizations to create transparent permit system",
+        "outcome": "Foreign involvement angers nationalists, but deaths decrease and Nepal's reputation improves. Your Tourism Minister mysteriously moves to Singapore.",
+        "is_constitutional": true,
+        "constitutional_implication": "International cooperation in tourism safety regulation is permissible and beneficial for public welfare.",
+        "effects": { "stability": 15, "economy": 10, "morale": 20, "stress": 8 }
+      },
+      {
+        "text": "Auction Everest permits to highest bidders and use money for hospital in Solukhumbu",
+        "outcome": "Ethically questionable but economically sound. Only billionaires can climb Everest now. Local Sherpas get excellent healthcare but lose traditional climbing culture.",
+        "is_constitutional": true,
+        "constitutional_implication": "Auction system could be legal market mechanism, though may create accessibility issues for legitimate climbers.",
+        "effects": { "stability": -5, "economy": 20, "morale": 10, "stress": 10 }
+      }
+    ]
+  },
+  {
+    "id": "event_15",
+    "title": "The Jealous Deputy PM Coup Attempt",
+    "description": "Your Deputy PM, who expected to be Prime Minister himself, is secretly meeting with opposition leaders and foreign ambassadors. Intelligence reports suggest he's planning a parliamentary coup with 30 MPs ready to switch sides. He's also your brother-in-law.",
+    "source_article": "Based on internal party politics and coalition betrayals in Nepal",
+    "image_search_query": "Nepal Deputy Prime Minister office Singha Durbar",
+    "image_source_credit": "Prime Minister Office Nepal",
+    "tags": ["betrayal", "family", "coalition"],
+    "historical_context": "Reflects the personal nature of Nepali politics where family relationships often conflict with political loyalty.",
+    "prerequisites": { "min_stability": 20, "max_stability": 80, "required_turn": 9 },
+    "choices": [
+      {
+        "text": "Have him arrested on treason charges before he can act",
+        "outcome": "Family dinners become very awkward. Your sister divorces your brother-in-law and blames you. Opposition rallies around him as a 'political prisoner'.",
+        "is_constitutional": false,
+        "constitutional_implication": "Arresting political opponents without proper evidence violates due process rights under Article 20.",
+        "effects": { "stability": -20, "economy": -5, "morale": -15, "stress": 20 }
+      },
+      {
+        "text": "Confront him publicly and challenge him to a no-confidence vote",
+        "outcome": "A dramatic parliamentary showdown that Nepal's political junkies love. You either emerge stronger or fall spectacularly. Nepali politics at its finest.",
+        "is_constitutional": true,
+        "constitutional_implication": "No-confidence motions are legitimate constitutional mechanisms for resolving political disputes under Article 100.",
+        "effects": { "stability": 5, "economy": -10, "morale": 15, "stress": 15 }
+      },
+      {
+        "text": "Offer him a prestigious but powerless position as 'Special Envoy to Tibet'",
+        "outcome": "He's flattered but suspicious. China is confused why Nepal is sending envoys to Tibet. He accepts but plots revenge from Lhasa.",
+        "is_constitutional": true,
+        "constitutional_implication": "Creating diplomatic positions falls within executive powers, though effectiveness depends on actual duties.",
+        "effects": { "stability": 10, "economy": -5, "morale": 5, "stress": 8 }
+      },
+      {
+        "text": "Leak his foreign bank account details to media",
+        "outcome": "He's destroyed politically but takes half your government down with him in revenge. Media discovers your own questionable transactions in the process.",
+        "is_constitutional": false,
+        "constitutional_implication": "Unauthorized disclosure of private financial information violates privacy rights under Article 28.",
+        "effects": { "stability": -25, "economy": -10, "morale": -20, "stress": 25 }
+      }
+    ]
+  },
+  {
+    "id": "event_16",
+    "title": "The Power-Mad Provincial Chief Minister",
+    "description": "Gandaki Province's Chief Minister has declared himself 'King of Gandaki' and is refusing to implement federal policies. He's building a private army of 'Provincial Guards' and has banned federal officials from entering Pokhara. Tourism is booming as people come to see the 'rebel province'.",
+    "source_article": "Satirical take on federal-provincial tensions in Nepal",
+    "image_search_query": "Gandaki Province Pokhara government building",
+    "image_source_credit": "Gandaki Province Government",
+    "tags": ["federalism", "rebellion", "satire"],
+    "historical_context": "Exaggerated version of real federal-provincial tensions that have occurred since implementation of federalism in Nepal.",
+    "prerequisites": { "min_stability": 40, "max_stability": 90, "required_turn": 10 },
+    "choices": [
+      {
+        "text": "Send federal police to arrest the 'King' and restore constitutional order",
+        "outcome": "A mini civil war erupts in Pokhara. Tourists film the action and Nepal becomes a meme. International media calls it 'Game of Thrones: Himalayan Edition'.",
+        "is_constitutional": true,
+        "constitutional_implication": "Federal government has authority to ensure constitutional compliance by provincial governments under Article 248.",
+        "effects": { "stability": -15, "economy": 10, "morale": -5, "stress": 20 }
+      },
+      {
+        "text": "Recognize his 'kingdom' as a special tourism zone with autonomous status",
+        "outcome": "You've essentially broken Nepal into pieces, but tourist revenue skyrockets. Other provinces demand similar 'kingdom' status. Constitutional lawyers have nervous breakdowns.",
+        "is_constitutional": false,
+        "constitutional_implication": "Creating autonomous kingdoms violates the Constitution's federal structure and territorial integrity provisions.",
+        "effects": { "stability": -30, "economy": 25, "morale": 15, "stress": 30 }
+      },
+      {
+        "text": "Challenge him to single combat on live TV to resolve the dispute",
+        "outcome": "The most watched event in Nepali television history. Win or lose, you become a legend. Constitutional scholars debate whether this creates legal precedent.",
+        "is_constitutional": true,
+        "constitutional_implication": "While bizarre, personal challenges don't violate the Constitution, though they may undermine institutional dignity.",
+        "effects": { "stability": 20, "economy": 5, "morale": 30, "stress": 5 }
+      },
+      {
+        "text": "Cut off all federal funding to Gandaki until he complies",
+        "outcome": "Economic pressure works but innocent citizens suffer. His 'kingdom' becomes a failed state within Nepal. Pokhara's lakes start drying up from poor maintenance.",
+        "is_constitutional": true,
+        "constitutional_implication": "Federal government can withhold funding for non-compliance with constitutional requirements under fiscal federalism provisions.",
+        "effects": { "stability": 15, "economy": -15, "morale": -10, "stress": 12 }
+      }
+    ]
+  }
+]

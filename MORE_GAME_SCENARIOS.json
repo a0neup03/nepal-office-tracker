@@ -1,0 +1,289 @@
+[
+  {
+    "id": "event_17",
+    "title": "The Earthquake Relief Fund Vanishing Act",
+    "description": "Two years after a major earthquake, only 30% of the $2 billion international relief fund has reached victims. The rest has mysteriously disappeared through a web of NGOs run by politicians' spouses. Earthquake victims are living in tents while relief coordinators drive Lamborghinis.",
+    "source_article": "Based on 2015 earthquake relief distribution issues",
+    "image_search_query": "Nepal earthquake relief distribution corruption",
+    "image_source_credit": "International Red Cross Nepal",
+    "tags": ["corruption", "disaster", "international"],
+    "historical_context": "Mirrors the actual challenges faced in distributing earthquake relief funds effectively in Nepal.",
+    "prerequisites": { "min_stability": 0, "max_stability": 60, "required_turn": 11 },
+    "choices": [
+      {
+        "text": "Blame international donors for 'inadequate funding' and ask for more money",
+        "outcome": "Donors are furious and cancel future aid. Your Relief Minister buys a helicopter 'for emergency response' but uses it for wedding parties.",
+        "is_constitutional": false,
+        "constitutional_implication": "Misrepresenting facts to international partners violates principles of honest governance expected in democratic systems.",
+        "effects": { "stability": -35, "economy": -30, "morale": -40, "stress": 30 }
+      },
+      {
+        "text": "Launch dramatic raid on NGO offices and arrest all corrupt officials",
+        "outcome": "Media loves the action, but you discover your own party members are involved. Your spouse asks why you're investigating their 'humanitarian work'.",
+        "is_constitutional": true,
+        "constitutional_implication": "Anti-corruption enforcement is a constitutional duty under good governance principles.",
+        "effects": { "stability": 15, "economy": 5, "morale": 25, "stress": 15 }
+      },
+      {
+        "text": "Secretly divert development budget to earthquake victims without telling parliament",
+        "outcome": "Victims finally get help but you've violated budget procedures. Opposition discovers the unauthorized spending and calls for impeachment.",
+        "is_constitutional": false,
+        "constitutional_implication": "Unauthorized budget diversions violate parliamentary oversight of public finances under Article 59.",
+        "effects": { "stability": -20, "economy": -15, "morale": 20, "stress": 18 }
+      },
+      {
+        "text": "Create a public blockchain system where every dollar spent is tracked online",
+        "outcome": "Tech-savvy approach that impresses young voters but confuses older politicians. Corruption becomes impossible but government moves at glacier pace.",
+        "is_constitutional": true,
+        "constitutional_implication": "Transparency measures enhance democratic accountability and are constitutionally encouraged.",
+        "effects": { "stability": 20, "economy": 10, "morale": 30, "stress": -5 }
+      }
+    ]
+  },
+  {
+    "id": "event_18",
+    "title": "Your Wife Wants to Be President",
+    "description": "Your politically ambitious wife has started her own political party and is demanding you support her presidential bid. She threatens to reveal your offshore accounts if you don't. Your mother-in-law has already started campaigning and painted her face on half the buildings in Kathmandu.",
+    "source_article": "Satirical take on political dynasties and family ambitions",
+    "image_search_query": "Nepal political campaign posters family",
+    "image_source_credit": "Election Commission Nepal",
+    "tags": ["family", "corruption", "dynasty"],
+    "historical_context": "Reflects the role of political dynasties and family ambitions in South Asian politics.",
+    "prerequisites": { "min_stability": 30, "max_stability": 90, "required_turn": 12 },
+    "choices": [
+      {
+        "text": "Publicly support her campaign and use government resources to help",
+        "outcome": "You create a political dynasty but destroy democratic norms. Opposition calls you 'King and Queen of corruption.' Your approval ratings plummet.",
+        "is_constitutional": false,
+        "constitutional_implication": "Using government resources for family political campaigns violates principles of fair elections and public resource use.",
+        "effects": { "stability": -30, "economy": -20, "morale": -35, "stress": 25 }
+      },
+      {
+        "text": "Oppose her candidacy and risk family nuclear war",
+        "outcome": "Your wife runs against you, revealing embarrassing personal details on TV. Dinner table conversations become strategic negotiations. Nepal gets reality TV politics.",
+        "is_constitutional": true,
+        "constitutional_implication": "Maintaining separation between personal relationships and official duties upholds democratic integrity.",
+        "effects": { "stability": -10, "economy": -5, "morale": 15, "stress": 20 }
+      },
+      {
+        "text": "Resign from politics entirely and become a yoga instructor in Rishikesh",
+        "outcome": "The most honest option. Nepal loses a Prime Minister but gains inner peace. Your yoga classes become very popular with stressed politicians.",
+        "is_constitutional": true,
+        "constitutional_implication": "Voluntary resignation is a legitimate constitutional option when personal conflicts compromise public service.",
+        "effects": { "stability": 10, "economy": -15, "morale": 20, "stress": -10 }
+      },
+      {
+        "text": "Convince her to run for Mayor of Kathmandu instead",
+        "outcome": "A compromise that satisfies no one. She becomes the most powerful mayor in Nepal's history and treats the capital like her personal kingdom.",
+        "is_constitutional": true,
+        "constitutional_implication": "Supporting family members in appropriate roles doesn't violate constitutional principles if done fairly.",
+        "effects": { "stability": 5, "economy": 10, "morale": 5, "stress": 12 }
+      }
+    ]
+  },
+  {
+    "id": "event_19",
+    "title": "The Indian Blockade Blackmail",
+    "description": "India has quietly closed all border crossings after you signed a trade deal with China. Essential supplies are running out. Your Foreign Minister suggests offering India access to Nepali rivers in exchange for reopening borders, but environmentalists are furious.",
+    "source_article": "Based on 2015 Indian blockade during constitution promulgation",
+    "image_search_query": "Nepal India border Birgunj blockade",
+    "image_source_credit": "Nepal-India Border Commission",
+    "tags": ["foreign_policy", "crisis", "sovereignty"],
+    "historical_context": "References the 2015 blockade that tested Nepal's sovereignty and highlighted dependence on India for essential supplies.",
+    "prerequisites": { "min_stability": 20, "max_stability": 100, "required_turn": 13 },
+    "choices": [
+      {
+        "text": "Give India everything they want and cancel the China deal",
+        "outcome": "Borders reopen immediately but you look weak. China cancels all investments. Opposition calls you an 'Indian puppet.' Your approval hits rock bottom.",
+        "is_constitutional": true,
+        "constitutional_implication": "While legal, surrendering to foreign pressure undermines national sovereignty principles in foreign policy.",
+        "effects": { "stability": -25, "economy": -20, "morale": -30, "stress": 20 }
+      },
+      {
+        "text": "Mobilize public to 'defend national sovereignty' and prepare for long blockade",
+        "outcome": "Patriotic fervor rises but people start dying from medicine shortages. You become a hero to some, a stubborn fool to others. History will judge.",
+        "is_constitutional": true,
+        "constitutional_implication": "Defending sovereignty is a constitutional obligation, though public welfare must be considered.",
+        "effects": { "stability": 15, "economy": -35, "morale": 20, "stress": 25 }
+      },
+      {
+        "text": "Secretly negotiate with both India and China for a trilateral deal",
+        "outcome": "Complex diplomacy that might work or might anger both neighbors. You're playing with fire but could emerge as a master strategist.",
+        "is_constitutional": true,
+        "constitutional_implication": "Balanced diplomacy aligns with constitutional principles of maintaining good relations with all neighbors.",
+        "effects": { "stability": 20, "economy": 15, "morale": 25, "stress": 15 }
+      },
+      {
+        "text": "Ask the UN to mediate and internationalize the dispute",
+        "outcome": "India is furious about involving international bodies in bilateral issues. UN bureaucrats descend on Kathmandu. Process takes years but principles matter.",
+        "is_constitutional": true,
+        "constitutional_implication": "Seeking international mediation is within sovereign rights and multilateral engagement principles.",
+        "effects": { "stability": 10, "economy": -15, "morale": 15, "stress": 20 }
+      }
+    ]
+  },
+  {
+    "id": "event_20",
+    "title": "The TikTok Revolution",
+    "description": "A 19-year-old TikTok influencer with 2 million followers is organizing nationwide protests against 'old politicians who don't understand technology.' She's demanding all government services go digital and threatens to 'cancel' you if you don't resign. Her videos get more views than parliament sessions.",
+    "source_article": "Modern take on youth activism and social media politics",
+    "image_search_query": "Nepal youth TikTok protest social media",
+    "image_source_credit": "Nepal Youth Organization",
+    "tags": ["youth", "technology", "social_media"],
+    "historical_context": "Reflects the growing role of social media in political mobilization and generational conflicts in governance.",
+    "prerequisites": { "min_morale": 0, "max_morale": 70, "required_turn": 14 },
+    "choices": [
+      {
+        "text": "Ban TikTok and arrest the influencer for 'cyber terrorism'",
+        "outcome": "Every young person in Nepal turns against you. International media calls you a dictator. The influencer becomes a global symbol of free speech.",
+        "is_constitutional": false,
+        "constitutional_implication": "Banning social media and arresting activists violates freedom of expression under Article 17.",
+        "effects": { "stability": -40, "economy": -15, "morale": -45, "stress": 35 }
+      },
+      {
+        "text": "Join TikTok yourself and start making government policy videos",
+        "outcome": "You become a viral meme for all the wrong reasons. Your dancing videos while explaining tax policy get 10 million views but for comedy value.",
+        "is_constitutional": true,
+        "constitutional_implication": "Using social media for government communication is legitimate, though execution matters for credibility.",
+        "effects": { "stability": 5, "economy": 0, "morale": 15, "stress": 10 }
+      },
+      {
+        "text": "Hire her as 'Digital Transformation Advisor' for the government",
+        "outcome": "Brilliant move that neutralizes opposition. She revolutionizes government services but struggles with bureaucracy. Your IT Minister quits in frustration.",
+        "is_constitutional": true,
+        "constitutional_implication": "Hiring qualified advisors for government modernization is within executive powers and constitutionally sound.",
+        "effects": { "stability": 20, "economy": 15, "morale": 25, "stress": 5 }
+      },
+      {
+        "text": "Challenge her to a public debate on live TV",
+        "outcome": "David vs Goliath battle that captivates Nepal. Win or lose, you show respect for youth voices. She proves surprisingly knowledgeable about governance.",
+        "is_constitutional": true,
+        "constitutional_implication": "Engaging in democratic dialogue with critics demonstrates healthy democratic practices.",
+        "effects": { "stability": 15, "economy": 5, "morale": 20, "stress": 8 }
+      }
+    ]
+  },
+  {
+    "id": "event_21",
+    "title": "The Monsoon Dam Disaster Dilemma",
+    "description": "Heavy monsoons threaten to burst a poorly constructed dam that will flood 50 villages. You can save the villages by opening the dam early, but this will destroy 500 acres of ready-to-harvest crops and bankrupt farmers. The dam was built by your brother's construction company.",
+    "source_article": "Based on recurring monsoon flooding and dam safety issues in Nepal",
+    "image_search_query": "Nepal monsoon flood dam safety",
+    "image_source_credit": "Department of Hydrology Nepal",
+    "tags": ["disaster", "family", "corruption"],
+    "historical_context": "Reflects the chronic issues with dam construction quality and monsoon preparedness in Nepal.",
+    "prerequisites": { "min_stability": 30, "max_stability": 100, "required_turn": 15 },
+    "choices": [
+      {
+        "text": "Keep the dam closed and pray it holds - save the crops",
+        "outcome": "You're gambling with human lives to protect property. If the dam bursts, you're responsible for hundreds of deaths. If it holds, you're a hero to farmers.",
+        "is_constitutional": false,
+        "constitutional_implication": "Knowingly risking human lives violates the constitutional duty to protect citizens under Article 16.",
+        "effects": { "stability": -30, "economy": 15, "morale": -25, "stress": 30 }
+      },
+      {
+        "text": "Open the dam immediately and compensate farmers from disaster fund",
+        "outcome": "Villages are saved but farmers riot over destroyed crops. Opposition investigates your brother's construction contracts. You're praised abroad but hated locally.",
+        "is_constitutional": true,
+        "constitutional_implication": "Prioritizing human life over property aligns with constitutional protection of right to life.",
+        "effects": { "stability": -10, "economy": -20, "morale": 10, "stress": 15 }
+      },
+      {
+        "text": "Evacuate villages AND offer to personally buy all crops at premium prices",
+        "outcome": "Heroic but expensive. You save lives and livelihoods but bankrupt the government. International donors are impressed by your compassion.",
+        "is_constitutional": true,
+        "constitutional_implication": "Using public resources for disaster management and compensation is constitutionally appropriate.",
+        "effects": { "stability": 20, "economy": -30, "morale": 30, "stress": 10 }
+      },
+      {
+        "text": "Arrest your brother publicly for shoddy construction to show you're not corrupt",
+        "outcome": "Family relationships destroyed but credibility restored. Your brother cooperates with investigators. Christmas dinner becomes very awkward forever.",
+        "is_constitutional": true,
+        "constitutional_implication": "Ensuring accountability regardless of family connections upholds rule of law principles.",
+        "effects": { "stability": 25, "economy": -5, "morale": 25, "stress": 5 }
+      }
+    ]
+  },
+  {
+    "id": "event_22",
+    "title": "The Great Yak vs WiFi Debate",
+    "description": "Mountain communities demand WiFi infrastructure but environmentalists warn that towers will disturb migration patterns of endangered yaks. Tourism Minister wants WiFi for Instagram tourism, but Yak Herders Association threatens to block all trekking routes if you choose technology over tradition.",
+    "source_article": "Satirical take on development vs environment conflicts in mountain regions",
+    "image_search_query": "Nepal mountain yak herders WiFi towers",
+    "image_source_credit": "High Mountain Development Association",
+    "tags": ["environment", "development", "tradition"],
+    "historical_context": "Reflects the genuine tension between modernization and environmental/cultural preservation in Nepal's mountains.",
+    "prerequisites": { "min_stability": 40, "max_stability": 100, "required_turn": 16 },
+    "choices": [
+      {
+        "text": "Choose yaks over WiFi - preserve traditional lifestyle",
+        "outcome": "Environmentalists celebrate but young mountain dwellers migrate to cities. Yaks are happy but can't tweet about it. Tourism drops as influencers avoid 'disconnected' areas.",
+        "is_constitutional": true,
+        "constitutional_implication": "Environmental protection is a constitutional directive principle, though development needs must be balanced.",
+        "effects": { "stability": 10, "economy": -15, "morale": 5, "stress": 12 }
+      },
+      {
+        "text": "Install WiFi everywhere and relocate yaks to 'Yak National Parks'",
+        "outcome": "Mountains get connected but traditional herding culture dies. Yaks get five-star accommodation but lose their freedom. Environmental groups boycott Nepal tourism.",
+        "is_constitutional": true,
+        "constitutional_implication": "Development projects are permissible but must consider environmental impact under constitutional environmental provisions.",
+        "effects": { "stability": -10, "economy": 20, "morale": -10, "stress": 15 }
+      },
+      {
+        "text": "Train yaks to carry WiFi equipment and become 'Technology Yaks'",
+        "outcome": "Absurd but innovative solution that goes viral globally. Nepal becomes known for 'Internet Yaks.' Traditional herders become IT consultants.",
+        "is_constitutional": true,
+        "constitutional_implication": "Creative development approaches that preserve traditions while enabling modernization are constitutionally sound.",
+        "effects": { "stability": 25, "economy": 25, "morale": 30, "stress": -5 }
+      },
+      {
+        "text": "Let yaks vote on WiFi installation through 'Yak Parliament'",
+        "outcome": "Media loves the story but constitutional lawyers question voting rights for animals. Yaks obviously can't vote, but it's great PR for Nepal's democracy.",
+        "is_constitutional": true,
+        "constitutional_implication": "While symbolic, this doesn't violate any constitutional provisions and demonstrates creative public engagement.",
+        "effects": { "stability": 15, "economy": 10, "morale": 25, "stress": 8 }
+      }
+    ]
+  },
+  {
+    "id": "event_23",
+    "title": "The Curry Corruption Scandal",
+    "description": "Investigation reveals that the government has been buying rice for school meals at $50 per kg when market price is $2. Your Education Minister owns the rice supply company. Children are getting excellent meals but taxpayers are funding the world's most expensive curry program.",
+    "source_article": "Based on various food supply corruption scandals in government programs",
+    "image_search_query": "Nepal school meal program rice supply",
+    "image_source_credit": "Ministry of Education Nepal",
+    "tags": ["corruption", "education", "children"],
+    "historical_context": "Reflects corruption patterns in government procurement programs, particularly those involving food supply.",
+    "prerequisites": { "min_stability": 20, "max_stability": 80, "required_turn": 17 },
+    "choices": [
+      {
+        "text": "Defend the program: 'Our children deserve premium rice'",
+        "outcome": "Parents appreciate well-fed children but taxpayers revolt. Auditors discover the rice is actually cheap grain painted gold. Your Education Minister flees to Dubai.",
+        "is_constitutional": false,
+        "constitutional_implication": "Defending corruption undermines constitutional principles of honest governance and proper use of public resources.",
+        "effects": { "stability": -35, "economy": -25, "morale": -20, "stress": 30 }
+      },
+      {
+        "text": "Fire the Education Minister and audit all government food programs",
+        "outcome": "Corruption exposed across multiple ministries. Half your cabinet resigns. Opposition calls you either complicit or incompetent. Clean-up takes years.",
+        "is_constitutional": true,
+        "constitutional_implication": "Anti-corruption measures and ministerial accountability are constitutional obligations under good governance.",
+        "effects": { "stability": -15, "economy": 5, "morale": 20, "stress": 20 }
+      },
+      {
+        "text": "Nationalize the rice company and distribute shares to school children",
+        "outcome": "Creative socialist solution that confuses economists. Children become shareholders and attend board meetings. School curriculum now includes corporate governance.",
+        "is_constitutional": true,
+        "constitutional_implication": "Nationalization for public welfare is within government powers, though implementation complexity matters.",
+        "effects": { "stability": 10, "economy": -10, "morale": 15, "stress": 15 }
+      },
+      {
+        "text": "Replace school meals with cryptocurrency and let children buy their own food",
+        "outcome": "Tech-savvy solution that baffles rural communities. 10-year-olds become crypto traders. Some get rich, others go hungry. Nepal leads in child financial literacy.",
+        "is_constitutional": true,
+        "constitutional_implication": "While innovative, ensuring children's nutritional needs are met remains a constitutional duty under right to food.",
+        "effects": { "stability": -5, "economy": 15, "morale": 10, "stress": 18 }
+      }
+    ]
+  }
+]

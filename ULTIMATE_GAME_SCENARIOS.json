@@ -1,0 +1,247 @@
+[
+  {
+    "id": "event_24",
+    "title": "The Time Machine Tax Scandal",
+    "description": "Your Finance Minister has been collecting taxes from businesses that haven't been established yet, using 'predictive economics.' Surprisingly, revenue has increased 400%, but business owners are confused about paying taxes for companies they're only thinking about starting.",
+    "source_article": "Satirical take on creative but questionable tax collection methods",
+    "image_search_query": "Nepal tax office revenue collection",
+    "image_source_credit": "Inland Revenue Department Nepal",
+    "tags": ["corruption", "economy", "satire"],
+    "historical_context": "Satirizes the sometimes creative approaches to revenue generation in developing economies.",
+    "prerequisites": { "min_stability": 30, "max_stability": 90, "required_turn": 18 },
+    "choices": [
+      {
+        "text": "Legalize future taxation and establish 'Department of Tomorrow'",
+        "outcome": "You've created the world's first time-traveling bureaucracy. Economists have nervous breakdowns. Nepal becomes a case study in universities worldwide.",
+        "is_constitutional": false,
+        "constitutional_implication": "Taxation without proper legal basis violates constitutional principles of due process and fair taxation under Article 60.",
+        "effects": { "stability": -20, "economy": 25, "morale": -15, "stress": 25 }
+      },
+      {
+        "text": "Return all future taxes and fire the Finance Minister",
+        "outcome": "Budget crisis hits immediately. Opposition asks how you didn't notice this earlier. Your Finance Minister starts a consulting firm called 'Fiscal Futures Inc.'",
+        "is_constitutional": true,
+        "constitutional_implication": "Correcting improper taxation and ensuring ministerial accountability follows constitutional governance principles.",
+        "effects": { "stability": 10, "economy": -20, "morale": 15, "stress": 15 }
+      },
+      {
+        "text": "Convert future taxes into 'Innovation Bonds' for startup funding",
+        "outcome": "Brilliant pivot that turns scandal into policy innovation. Young entrepreneurs love it. Traditional businesses are still confused but impressed by creativity.",
+        "is_constitutional": true,
+        "constitutional_implication": "Converting improper collections into legitimate investment mechanisms follows constitutional economic development principles.",
+        "effects": { "stability": 15, "economy": 20, "morale": 25, "stress": 10 }
+      }
+    ]
+  },
+  {
+    "id": "event_25",
+    "title": "The Great Passport Photo Conspiracy",
+    "description": "Investigation reveals that passport photos have been edited to make applicants look 'more attractive' before submission to foreign embassies. Some people don't recognize their own passports. Dating apps report increased catfishing from Nepal. International airports are confused.",
+    "source_article": "Satirical scenario about bureaucratic creativity in document processing",
+    "image_search_query": "Nepal passport office photo editing",
+    "image_source_credit": "Department of Passports Nepal",
+    "tags": ["bureaucracy", "international", "satire"],
+    "historical_context": "Satirical take on the sometimes creative interpretations of official procedures in government services.",
+    "prerequisites": { "min_stability": 40, "max_stability": 100, "required_turn": 19 },
+    "choices": [
+      {
+        "text": "Declare photo editing a 'national beauty enhancement program'",
+        "outcome": "Nepal becomes known for the world's most attractive passport holders. Tourism increases but identity verification becomes impossible. Interpol is not amused.",
+        "is_constitutional": false,
+        "constitutional_implication": "Falsifying official documents violates constitutional principles of honest documentation and international treaty obligations.",
+        "effects": { "stability": -15, "economy": 10, "morale": 20, "stress": 20 }
+      },
+      {
+        "text": "Recall all passports and restart with strict photo verification",
+        "outcome": "Massive bureaucratic nightmare affecting 50,000 travelers. Nepal's international travel grinds to halt. Passport office staff work overtime for months.",
+        "is_constitutional": true,
+        "constitutional_implication": "Ensuring document integrity is essential for constitutional compliance and international obligations.",
+        "effects": { "stability": -20, "economy": -25, "morale": -15, "stress": 25 }
+      },
+      {
+        "text": "Offer 'Premium Authentic Photo Service' versus 'Standard Enhanced Photos'",
+        "outcome": "Brilliant two-tier system that satisfies everyone. Honest people get real photos, vain people pay extra for enhancement. Revenue increases dramatically.",
+        "is_constitutional": false,
+        "constitutional_implication": "Creating different standards for official documents based on payment violates equal treatment principles.",
+        "effects": { "stability": 5, "economy": 20, "morale": 10, "stress": 12 }
+      }
+    ]
+  },
+  {
+    "id": "event_26",
+    "title": "The Supreme Court Justice Who Became a Monk",
+    "description": "Your Chief Justice has renounced worldly possessions, become a Buddhist monk, and is now issuing verdicts based on 'karma and compassion' rather than law. Legal community is divided - cases are resolved faster but constitutional lawyers are having existential crises.",
+    "source_article": "Satirical scenario about spiritual approach to judicial decisions",
+    "image_search_query": "Nepal Supreme Court Buddhist monk justice",
+    "image_source_credit": "Supreme Court Nepal Archives",
+    "tags": ["judiciary", "religion", "constitution"],
+    "historical_context": "Satirizes the intersection of spirituality and judicial decision-making in Nepal's context.",
+    "prerequisites": { "min_stability": 20, "max_stability": 80, "required_turn": 20 },
+    "choices": [
+      {
+        "text": "Support the 'Enlightened Judiciary' and make meditation mandatory for all judges",
+        "outcome": "Nepal develops the world's most spiritually advanced legal system. International law schools study 'Karmic Jurisprudence.' Court sessions include prayer wheels.",
+        "is_constitutional": false,
+        "constitutional_implication": "Religious-based judicial decisions violate constitutional principles of secular governance and equal justice under Article 4.",
+        "effects": { "stability": -10, "economy": -5, "morale": 15, "stress": 15 }
+      },
+      {
+        "text": "Respectfully ask the monk-judge to choose between robes and the bench",
+        "outcome": "He chooses the monastery, leaving a vacancy. Legal cases pile up for months. His replacement issues normal verdicts but everyone misses the wisdom.",
+        "is_constitutional": true,
+        "constitutional_implication": "Ensuring secular judicial processes maintains constitutional requirements for impartial justice.",
+        "effects": { "stability": 15, "economy": -10, "morale": 5, "stress": 12 }
+      },
+      {
+        "text": "Create separate 'Spiritual Court' for those who prefer karmic justice",
+        "outcome": "Innovative two-track system where people choose between legal law and karmic law. International legal scholars are fascinated and confused.",
+        "is_constitutional": false,
+        "constitutional_implication": "Creating parallel judicial systems undermines constitutional unity of the justice system under Article 126.",
+        "effects": { "stability": 5, "economy": 0, "morale": 20, "stress": 18 }
+      }
+    ]
+  },
+  {
+    "id": "event_27",
+    "title": "The Great Bureaucrat Productivity Crisis",
+    "description": "Government offices have achieved negative productivity - they're actually undoing work completed in previous years. Files are being deliberately complicated, simple permits require visits to 47 different offices, and some departments have forgotten what their purpose is.",
+    "source_article": "Satirical take on bureaucratic inefficiency taken to extreme",
+    "image_search_query": "Nepal government office bureaucracy queue",
+    "image_source_credit": "Civil Service Reform Commission",
+    "tags": ["bureaucracy", "efficiency", "satire"],
+    "historical_context": "Exaggerated version of real bureaucratic challenges that plague government efficiency.",
+    "prerequisites": { "min_economy": 0, "max_economy": 50, "required_turn": 21 },
+    "choices": [
+      {
+        "text": "Fire everyone and start fresh with college graduates",
+        "outcome": "Government stops completely for six months as new employees figure out what their jobs are. Some services improve, others disappear entirely. Revolution by unemployed bureaucrats.",
+        "is_constitutional": true,
+        "constitutional_implication": "Civil service reform is within executive powers, though proper procedures must be followed under constitutional employment protections.",
+        "effects": { "stability": -30, "economy": 20, "morale": -10, "stress": 30 }
+      },
+      {
+        "text": "Gamify government work with points, levels, and achievement badges",
+        "outcome": "Bureaucrats become obsessed with high scores. Permit processing becomes competitive sport. Citizens confused but services improve dramatically.",
+        "is_constitutional": true,
+        "constitutional_implication": "Innovative management approaches to improve efficiency are constitutionally permissible administrative reforms.",
+        "effects": { "stability": 10, "economy": 25, "morale": 20, "stress": 8 }
+      },
+      {
+        "text": "Accept that inefficiency is Nepal's unique cultural contribution to world civilization",
+        "outcome": "UNESCO declares Nepali bureaucracy an 'Intangible Cultural Heritage.' Tourists come to experience 'authentic administrative confusion.' Pride in dysfunction.",
+        "is_constitutional": true,
+        "constitutional_implication": "While not illegal, accepting inefficiency fails constitutional duty to provide effective governance to citizens.",
+        "effects": { "stability": 5, "economy": -15, "morale": 15, "stress": 20 }
+      }
+    ]
+  },
+  {
+    "id": "event_28",
+    "title": "The Minister Who Sold His Ministry",
+    "description": "Your Tourism Minister has literally sold the Tourism Ministry building to a hotel chain and moved ministry operations to the hotel lobby. Surprisingly, tourist services have improved dramatically, but constitutional lawyers are having panic attacks.",
+    "source_article": "Satirical scenario about extreme privatization measures",
+    "image_search_query": "Nepal Tourism Ministry building hotel",
+    "image_source_credit": "Ministry of Tourism Nepal",
+    "tags": ["privatization", "tourism", "corruption"],
+    "historical_context": "Exaggerated take on public-private partnerships and privatization debates.",
+    "prerequisites": { "min_stability": 30, "max_stability": 90, "required_turn": 22 },
+    "choices": [
+      {
+        "text": "Arrest the minister for selling government property",
+        "outcome": "Legal action restores constitutional order but tourism services collapse. Hotel guests are confused when ministry staff disappear. Tourism industry protests.",
+        "is_constitutional": true,
+        "constitutional_implication": "Protecting public property and prosecuting unauthorized sales upholds constitutional governance principles.",
+        "effects": { "stability": 15, "economy": -20, "morale": 5, "stress": 15 }
+      },
+      {
+        "text": "Legalize the sale and establish 'Ministry-Hotel Partnership Program'",
+        "outcome": "Revolutionary approach that improves government services. Other ministries start partnering with businesses. Finance Ministry moves into a bank lobby.",
+        "is_constitutional": false,
+        "constitutional_implication": "Unauthorized sale of public property violates constitutional provisions for public asset management.",
+        "effects": { "stability": -15, "economy": 25, "morale": 15, "stress": 18 }
+      },
+      {
+        "text": "Buy back the building but keep ministry operations in hotel lobby",
+        "outcome": "Expensive compromise that satisfies legal requirements while maintaining improved services. Constitutional lawyers remain confused but approve.",
+        "is_constitutional": true,
+        "constitutional_implication": "Proper public-private partnerships for service delivery can be constitutionally sound if properly structured.",
+        "effects": { "stability": 10, "economy": -10, "morale": 20, "stress": 10 }
+      }
+    ]
+  },
+  {
+    "id": "event_29",
+    "title": "The Great Census Falsification Scandal",
+    "description": "Your Statistics Department has been inflating population numbers by counting pets, fictional characters from TV shows, and dead people as residents. Nepal now officially has 50 million people including 5 million dogs and the entire cast of Indian soap operas.",
+    "source_article": "Satirical take on data manipulation in government statistics",
+    "image_search_query": "Nepal census statistics population count",
+    "image_source_credit": "Central Bureau of Statistics Nepal",
+    "tags": ["statistics", "corruption", "international"],
+    "historical_context": "Satirizes the temptation to manipulate data for political or economic advantage.",
+    "prerequisites": { "min_stability": 20, "max_stability": 80, "required_turn": 23 },
+    "choices": [
+      {
+        "text": "Defend the inclusive census: 'Dogs are citizens too!'",
+        "outcome": "Animal rights activists worldwide celebrate Nepal's progressive stance. UN confused about aid allocation. Dogs get voting rights in some municipalities.",
+        "is_constitutional": false,
+        "constitutional_implication": "Falsifying official statistics violates constitutional principles of honest governance and misleads constitutional resource allocation.",
+        "effects": { "stability": -25, "economy": -15, "morale": 20, "stress": 25 }
+      },
+      {
+        "text": "Conduct entirely new census with international supervision",
+        "outcome": "Expensive but necessary correction. Population drops to realistic 30 million. International aid reduced accordingly. Opposition blames you for 'losing' 20 million citizens.",
+        "is_constitutional": true,
+        "constitutional_implication": "Ensuring accurate data collection is essential for constitutional governance and proper resource planning.",
+        "effects": { "stability": 10, "economy": -20, "morale": -10, "stress": 20 }
+      },
+      {
+        "text": "Create separate categories: 'Human Citizens,' 'Pet Residents,' and 'Cultural Characters'",
+        "outcome": "Brilliant bureaucratic solution that maintains accuracy while saving face. Other countries adopt Nepal's innovative demographic classification system.",
+        "is_constitutional": true,
+        "constitutional_implication": "Accurate categorization of different population types can be constitutionally sound for proper governance planning.",
+        "effects": { "stability": 20, "economy": 5, "morale": 25, "stress": 5 }
+      }
+    ]
+  },
+  {
+    "id": "event_30",
+    "title": "The Ultimate Corruption Dilemma",
+    "description": "A foreign corporation offers you personally $100 million to approve a mining project that will create 50,000 jobs but destroy a sacred mountain. Your family is in debt, your party needs campaign funding, but environmental groups threaten mass protests. The decision will define your legacy.",
+    "source_article": "Ultimate moral dilemma combining personal greed, political necessity, and public good",
+    "image_search_query": "Nepal mountain mining environmental protest",
+    "image_source_credit": "Environmental Protection Agency Nepal",
+    "tags": ["corruption", "environment", "economy", "legacy"],
+    "historical_context": "Represents the ultimate test of political leadership - choosing between personal gain, political survival, economic development, and environmental protection.",
+    "prerequisites": { "min_stability": 10, "max_stability": 100, "required_turn": 25 },
+    "choices": [
+      {
+        "text": "Take the money, approve the project, and use wealth to flee to Switzerland",
+        "outcome": "You're rich but reviled. The mountain is destroyed, jobs are created, but you're remembered as the PM who sold Nepal's soul. Your children change their last name.",
+        "is_constitutional": false,
+        "constitutional_implication": "Taking bribes for policy decisions violates multiple constitutional provisions on corruption, fiduciary duty, and environmental protection.",
+        "effects": { "stability": -50, "economy": 30, "morale": -50, "stress": 50 }
+      },
+      {
+        "text": "Reject the offer entirely and protect the sacred mountain",
+        "outcome": "Environmental groups celebrate you as a hero. Unemployment remains high but Nepal's soul is intact. History books will remember your integrity over economics.",
+        "is_constitutional": true,
+        "constitutional_implication": "Rejecting corruption and protecting environmental/cultural heritage aligns with constitutional environmental and cultural protection duties.",
+        "effects": { "stability": 25, "economy": -20, "morale": 30, "stress": -10 }
+      },
+      {
+        "text": "Counter-propose: mining company invests $100M in renewable energy instead",
+        "outcome": "Brilliant negotiation that creates jobs without environmental destruction. Company initially resists but eventually agrees. You become model for sustainable development.",
+        "is_constitutional": true,
+        "constitutional_implication": "Negotiating development alternatives that balance economic needs with environmental protection exemplifies constitutional sustainable development principles.",
+        "effects": { "stability": 30, "economy": 25, "morale": 35, "stress": -15 }
+      },
+      {
+        "text": "Put the decision to a national referendum and let citizens choose",
+        "outcome": "Ultimate democratic solution that transfers moral responsibility to the people. Campaign becomes most intense in Nepal's history. Whatever the result, you followed democratic principles.",
+        "is_constitutional": true,
+        "constitutional_implication": "Using referendums for major national decisions demonstrates constitutional democratic participation and sovereignty of the people.",
+        "effects": { "stability": 20, "economy": 0, "morale": 25, "stress": 10 }
+      }
+    ]
+  }
+]
