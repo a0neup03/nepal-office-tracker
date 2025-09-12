@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🇳🇵 Nepal Political Strategy Simulator - Progressive Campaign</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .metric-bar { transition: width 0.8s ease-in-out; }
+        .reputation-bar { transition: width 0.6s ease-in-out; }
+        .constitutional-warning { animation: pulse 2s infinite; box-shadow: 0 0 20px rgba(239, 68, 68, 0.6); }
+        .crisis-alert { animation: shake 0.5s ease-in-out; }
+        .decision-trail { opacity: 0.7; transition: all 0.3s ease; }
+        .decision-trail:hover { opacity: 1; transform: scale(1.02); }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        
+        .strategy-panel {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-red-600 via-blue-600 to-red-600 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Enhanced Header with Strategy Stats -->
+        <div class="bg-white rounded-lg shadow-2xl p-6 mb-6">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center space-x-4">
+                    <div class="text-4xl">🇳🇵</div>
+                    <div>
+                        <h1 class="text-3xl font-bold text-gray-800">Nepal Political Strategy Engine</h1>
+                        <p class="text-gray-600">Progressive Campaign Simulation • Real Events • Dynamic Consequences</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-gray-500">Turn <span id="turnCounter">1</span> • Year <span id="yearCounter">2024</span></div>
+                    <div class="text-xs text-gray-400">Decisions Made: <span id="decisionCount">0</span></div>
+                </div>
+            </div>
+            
+            <!-- Player Reputation Dashboard -->
+            <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                <h3 class="text-lg font-bold mb-3 text-gray-700">🎭 Political Standing</h3>
+                <div class="grid md:grid-cols-3 gap-4 text-sm">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>🪖 Military</span><span id="repMilitary" class="font-bold">50</span>
+                        </div>
+                        <div class="w-full bg-gray-300 rounded h-2">
+                            <div id="repMilitaryBar" class="reputation-bar bg-green-500 h-2 rounded" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>⚖️ Judiciary</span><span id="repJudiciary" class="font-bold">50</span>
+                        </div>
+                        <div class="w-full bg-gray-300 rounded h-2">
+                            <div id="repJudiciaryBar" class="reputation-bar bg-blue-500 h-2 rounded" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>📺 Media</span><span id="repMedia" class="font-bold">50</span>
+                        </div>
+                        <div class="w-full bg-gray-300 rounded h-2">
+                            <div id="repMediaBar" class="reputation-bar bg-purple-500 h-2 rounded" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>👥 Youth</span><span id="repYouth" class="font-bold">50</span>
+                        </div>
+                        <div class="w-full bg-gray-300 rounded h-2">
+                            <div id="repYouthBar" class="reputation-bar bg-pink-500 h-2 rounded" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>🌍 International</span><span id="repInternational" class="font-bold">50</span>
+                        </div>
+                        <div class="w-full bg-gray-300 rounded h-2">
+                            <div id="repInternationalBar" class="reputation-bar bg-indigo-500 h-2 rounded" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>🏛️ Congress</span><span id="repCongress" class="font-bold">50</span>
+                        </div>
+                        <div class="w-full bg-gray-300 rounded h-2">
+                            <div id="repCongressBar" class="reputation-bar bg-green-600 h-2 rounded" style="width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Core Metrics Dashboard -->
+        <div class="grid md:grid-cols-4 gap-4 mb-6">
+            <div class="bg-white rounded-lg shadow-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">🏛️ Political Stability</h3>
+                    <span id="stabilityValue" class="text-lg font-bold text-blue-600">75</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                    <div id="stabilityBar" class="metric-bar bg-blue-500 h-3 rounded-full" style="width: 75%"></div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">💰 Economic Prosperity</h3>
+                    <span id="economyValue" class="text-lg font-bold text-green-600">60</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                    <div id="economyBar" class="metric-bar bg-green-500 h-3 rounded-full" style="width: 60%"></div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">😊 Public Morale</h3>
+                    <span id="moraleValue" class="text-lg font-bold text-purple-600">70</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                    <div id="moraleBar" class="metric-bar bg-purple-500 h-3 rounded-full" style="width: 70%"></div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">⚠️ System Stress</h3>
+                    <span id="stressValue" class="text-lg font-bold text-red-600">15</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                    <div id="stressBar" class="metric-bar bg-red-500 h-3 rounded-full" style="width: 15%"></div>
+                </div>
+                <div class="text-xs text-gray-500 mt-1">Crises trigger at 25, 50, 75</div>
+            </div>
+        </div>
+
+        <!-- Decision History Trail -->
+        <div class="bg-white rounded-lg shadow-lg p-4 mb-6">
+            <h3 class="text-lg font-bold mb-3 text-gray-700">📊 Decision Trail</h3>
+            <div id="decisionTrail" class="space-y-2 max-h-32 overflow-y-auto">
+                <div class="text-gray-500 text-sm italic">Your political journey will be recorded here...</div>
+            </div>
+        </div>
+
+        <!-- Current Event with Real Image -->
+        <div class="bg-white rounded-lg shadow-2xl p-8 mb-6">
+            <!-- Real Event Image -->
+            <div id="eventImageContainer" class="w-full mb-6">
+                <img id="eventImage" class="w-full h-64 object-cover rounded-lg shadow-md" 
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Singha_Durbar_Kathmandu_Nepal.jpg/1200px-Singha_Durbar_Kathmandu_Nepal.jpg" 
+                     alt="Nepal Government Building">
+                <div class="text-xs text-gray-500 mt-1 text-center" id="imageCredit">Source: Wikimedia Commons</div>
+            </div>
+            
+            <div class="mb-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h2 id="eventTitle" class="text-2xl font-bold text-gray-800">
+                        Ex-Chief Justice Becoming Prime Minister Crisis
+                    </h2>
+                    <div class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded">BREAKING NEWS</div>
+                </div>
+                <p id="eventDescription" class="text-gray-600 leading-relaxed mb-4">
+                    Former Chief Justice Cholendra Shamsher Rana is making a political comeback, seeking to become Prime Minister. Legal experts question the constitutional propriety while political parties are divided. Your own party members are split on supporting or opposing this unprecedented transition from judiciary to executive.
+                </p>
+                
+                <!-- Dynamic Context Based on Player History -->
+                <div id="playerContext" class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+                    <p class="text-blue-800 text-sm">
+                        <strong>Your Political Standing:</strong> Based on your previous decisions, different factions view you differently. Your approach to this crisis will be judged against your established reputation.
+                    </p>
+                </div>
+                
+                <div id="historicalContext" class="bg-orange-50 border-l-4 border-orange-400 p-4 mb-4">
+                    <p class="text-orange-800 text-sm">
+                        <strong>Historical Context:</strong> This scenario reflects real debates about separation of powers and post-retirement political careers of senior officials in Nepal.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Dynamic Choices Based on Player State -->
+            <div id="choicesContainer" class="space-y-4">
+                <!-- Choices will be dynamically generated based on player's reputation and history -->
+            </div>
+        </div>
+
+        <!-- Strategy Insights Panel -->
+        <div class="strategy-panel rounded-lg text-white p-6 mb-6">
+            <h3 class="text-xl font-bold mb-4">🧠 Strategic Analysis</h3>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                    <h4 class="font-semibold mb-2">Political Capital</h4>
+                    <div id="politicalCapital" class="text-sm">
+                        Your reputation with key factions determines available options...
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-2">Projected Outcomes</h4>
+                    <div id="projectedOutcomes" class="text-sm">
+                        AI analysis of potential consequences...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Controls -->
+        <div class="flex justify-center space-x-4 mb-6">
+            <button id="nextTurnBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-200">
+                Continue Governing
+            </button>
+            <button id="viewAnalyticsBtn" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition duration-200">
+                📊 View Analytics
+            </button>
+            <button id="restartBtn" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg transition duration-200">
+                Restart Campaign
+            </button>
+        </div>
+
+        <!-- Analytics Dashboard (Hidden by default) -->
+        <div id="analyticsPanel" class="hidden bg-white rounded-lg shadow-2xl p-8 mb-6">
+            <h3 class="text-2xl font-bold mb-6 text-gray-800">📊 Political Performance Analytics</h3>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <canvas id="performanceChart" width="400" height="200"></canvas>
+                </div>
+                <div>
+                    <canvas id="reputationChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+            
+            <div class="mt-6">
+                <h4 class="text-lg font-semibold mb-4">🎯 Decision Analysis</h4>
+                <div id="decisionAnalysis" class="space-y-2 max-h-64 overflow-y-auto bg-gray-50 p-4 rounded">
+                    <!-- Decision analysis will appear here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Crisis Alert System -->
+        <div id="alertsContainer" class="mb-6">
+            <!-- Crisis alerts appear here -->
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="bg-white rounded-lg p-8 max-w-2xl w-full mx-4">
+                <h2 class="text-3xl font-bold text-center mb-4" id="gameOverTitle">Political Career Ended</h2>
+                <div class="mb-6">
+                    <canvas id="finalAnalyticsChart" width="400" height="200"></canvas>
+                </div>
+                <p class="text-gray-600 text-center mb-6" id="gameOverMessage">Your decisions led to this outcome...</p>
+                <div class="flex justify-center space-x-4">
+                    <button id="playAgainBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">
+                        Start New Campaign
+                    </button>
+                    <button id="shareResultsBtn" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded">
+                        Share Results
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Advanced Game State with Reputation System
+        let gameState = {
+            // Core Metrics
+            turn: 1,
+            year: 2024,
+            stability: 75,
+            economy: 60,
+            morale: 70,
+            stress: 15,
+            
+            // Reputation with Key Factions (0-100)
+            reputation: {
+                military: 50,
+                judiciary: 50,
+                media: 50,
+                youth: 50,
+                international: 50,
+                congress: 50,
+                uml: 50,
+                maoist: 50
+            },
+            
+            // Player Traits (develop over time)
+            traits: {
+                authoritarian: 0,
+                corrupt: 0,
+                reformist: 0,
+                nationalist: 0,
+                populist: 0
+            },
+            
+            // Decision History for Dynamic Storytelling
+            decisionHistory: [],
+            currentEvent: null,
+            usedEvents: [],
+            unlockedEvents: [],
+            
+            // Political Capital
+            politicalCapital: 100,
+            alliances: [],
+            enemies: []
+        };
+
+        // Real Nepal Political Events with Images
+        const strategicEvents = [
+            {
+                id: "event_cj_pm",
+                title: "Ex-Chief Justice Seeking Prime Ministership",
+                description: "Former Chief Justice Cholendra Shamsher Rana announces political ambitions to become Prime Minister. Constitutional experts debate the propriety while parties calculate political benefits.",
+                imageUrl: "https://english.onlinekhabar.com/wp-content/uploads/2021/09/Cholendra-Shumsher-Rana.jpg",
+                imageCredit: "Online Khabar",
+                tags: ["judiciary", "constitution", "power"],
+                unlockConditions: { turn: 1 },
+                reputationEffects: { judiciary: -10, media: 5 },
+                choices: [
+                    {
+                        text: "Publicly support his right to enter politics after retirement",
+                        outcome: "Legal precedent established but judiciary integrity questioned. Opposition uses this to attack separation of powers.",
+                        is_constitutional: true,
+                        effects: { stability: -15, economy: 0, morale: -10, stress: 12 },
+                        reputationChanges: { judiciary: -15, media: 10, congress: -10 },
+                        unlocks: ["event_judicial_revolt"]
+                    },
+                    {
+                        text: "Oppose his candidacy citing conflict of interest",
+                        outcome: "Constitutional purists applaud but you make a powerful enemy. He rallies judicial community against you.",
+                        is_constitutional: true,
+                        effects: { stability: 10, economy: 0, morale: 5, stress: 8 },
+                        reputationChanges: { judiciary: -20, media: 15, international: 10 },
+                        unlocks: ["event_judicial_strike"]
+                    },
+                    {
+                        text: "Secretly negotiate a deal - support him for favorable court rulings",
+                        outcome: "Quid pro quo arrangement gives you judicial protection but violates separation of powers. Dangerous precedent set.",
+                        is_constitutional: false,
+                        effects: { stability: 20, economy: 5, morale: -15, stress: 15 },
+                        reputationChanges: { judiciary: 25, media: -25, international: -20 },
+                        unlocks: ["event_corruption_scandal"]
+                    }
+                ]
+            },
+            {
+                id: "event_pm_beaten",
+                title: "Ex-Prime Minister Physical Attack Incident", 
+                description: "Reports emerge of a former Prime Minister being physically assaulted by angry citizens. Security concerns rise for all politicians. Public anger at political class reaches dangerous levels.",
+                imageUrl: "https://img.republicworld.com/republic-prod/stories/promolarge/xhdpi/rstwrm7qbzdkgb4t_1640874474.jpeg",
+                imageCredit: "Republic World",
+                tags: ["security", "public_anger", "violence"],
+                unlockConditions: { stress: 25 },
+                choices: [
+                    {
+                        text: "Increase security for all political leaders immediately",
+                        outcome: "Politicians feel safer but public sees it as creating distance between leaders and people. Opposition calls it 'elite protection'.",
+                        effects: { stability: 15, economy: -10, morale: -20, stress: 5 },
+                        reputationChanges: { military: 10, youth: -15, media: -10 }
+                    },
+                    {
+                        text: "Continue public interactions despite risks to show you're not afraid",
+                        outcome: "Brave gesture that resonates with public but security agencies are concerned. You're vulnerable but gain credibility.",
+                        effects: { stability: -5, economy: 0, morale: 25, stress: -10 },
+                        reputationChanges: { youth: 20, military: -15, media: 15 }
+                    },
+                    {
+                        text: "Launch investigation into political violence and prosecute attackers",
+                        outcome: "Rule of law approach that satisfies institutions but some see it as protecting corrupt politicians from public anger.",
+                        effects: { stability: 10, economy: -5, morale: 5, stress: 3 },
+                        reputationChanges: { judiciary: 15, youth: -5, international: 10 }
+                    }
+                ]
+            },
+            {
+                id: "event_singhadurbar_threat",
+                title: "Threats to Burn Singha Durbar",
+                description: "Angry protesters are marching toward Singha Durbar threatening to burn government buildings. Social media is full of images from past incidents when CA building was actually attacked.",
+                imageUrl: "https://www.nepalitimes.com/assets/uploads/2021/05/Singha-Durbar-fire-1973.jpg",
+                imageCredit: "Nepali Times Archives", 
+                tags: ["protest", "violence", "government"],
+                unlockConditions: { stress: 35 },
+                choices: [
+                    {
+                        text: "Deploy security forces with orders to protect buildings at all costs",
+                        outcome: "Government buildings saved but confrontation with protesters escalates. Images of police vs citizens damage your democratic credentials.",
+                        effects: { stability: -20, economy: -5, morale: -25, stress: 20 },
+                        reputationChanges: { military: 15, youth: -30, international: -15 }
+                    },
+                    {
+                        text: "Allow controlled access but ensure no violence occurs",
+                        outcome: "Protesters enter but don't cause major damage. You look weak to some but democratic to others. Compromise satisfies few.",
+                        effects: { stability: -10, economy: -15, morale: 10, stress: 15 },
+                        reputationChanges: { youth: 10, military: -10, media: 5 }
+                    },
+                    {
+                        text: "Meet protesters personally and address their demands publicly",
+                        outcome: "High-risk direct democracy that could backfire or make you a hero. Media captures every moment of this bold move.",
+                        effects: { stability: 15, economy: 0, morale: 30, stress: -15 },
+                        reputationChanges: { youth: 25, media: 20, military: -20 }
+                    }
+                ]
+            }
+        ];
+
+        // Dynamic Scenario Selection Algorithm
+        function selectNextEvent() {
+            const availableEvents = strategicEvents.filter(event => {
+                if (gameState.usedEvents.includes(event.id)) return false;
+                
+                // Check unlock conditions
+                const conditions = event.unlockConditions;
+                if (conditions.turn && gameState.turn < conditions.turn) return false;
+                if (conditions.stress && gameState.stress < conditions.stress) return false;
+                if (conditions.reputation) {
+                    for (let [faction, minRep] of Object.entries(conditions.reputation)) {
+                        if (gameState.reputation[faction] < minRep) return false;
+                    }
+                }
+                
+                return true;
+            });
+
+            if (availableEvents.length === 0) {
+                return generateDynamicEvent();
+            }
+
+            // Weight selection based on current game state
+            return availableEvents[Math.floor(Math.random() * availableEvents.length)];
+        }
+
+        // Generate Dynamic Event Based on Player History
+        function generateDynamicEvent() {
+            const playerTraits = gameState.traits;
+            const dominantTrait = Object.keys(playerTraits).reduce((a, b) => 
+                playerTraits[a] > playerTraits[b] ? a : b
+            );
+            
+            // Create event that challenges player's established pattern
+            return {
+                id: "dynamic_" + Date.now(),
+                title: `${dominantTrait} Leader Faces Contradiction`,
+                description: `Your reputation as a ${dominantTrait} leader is challenged by new circumstances...`,
+                imageUrl: "https://english.onlinekhabar.com/wp-content/uploads/2021/12/Nepal-Parliament.jpg",
+                imageCredit: "Online Khabar",
+                choices: generateContextualChoices(dominantTrait)
+            };
+        }
+
+        // Update All Metrics and UI
+        function updateGameState() {
+            // Clamp values
+            gameState.stability = Math.max(0, Math.min(100, gameState.stability));
+            gameState.economy = Math.max(0, Math.min(100, gameState.economy));
+            gameState.morale = Math.max(0, Math.min(100, gameState.morale));
+            gameState.stress = Math.max(0, Math.min(100, gameState.stress));
+            
+            // Update reputation bars
+            for (let [faction, value] of Object.entries(gameState.reputation)) {
+                const clampedValue = Math.max(0, Math.min(100, value));
+                gameState.reputation[faction] = clampedValue;
+                
+                const element = document.getElementById(`rep${faction.charAt(0).toUpperCase() + faction.slice(1)}`);
+                const bar = document.getElementById(`rep${faction.charAt(0).toUpperCase() + faction.slice(1)}Bar`);
+                if (element && bar) {
+                    element.textContent = clampedValue;
+                    bar.style.width = clampedValue + '%';
+                    
+                    // Color coding based on relationship
+                    if (clampedValue < 30) bar.className = bar.className.replace(/bg-\w+-\d+/, 'bg-red-500');
+                    else if (clampedValue < 70) bar.className = bar.className.replace(/bg-\w+-\d+/, 'bg-yellow-500');
+                    else bar.className = bar.className.replace(/bg-\w+-\d+/, 'bg-green-500');
+                }
+            }
+
+            // Update core metrics
+            document.getElementById('stabilityValue').textContent = gameState.stability;
+            document.getElementById('economyValue').textContent = gameState.economy;
+            document.getElementById('moraleValue').textContent = gameState.morale;
+            document.getElementById('stressValue').textContent = gameState.stress;
+
+            document.getElementById('stabilityBar').style.width = gameState.stability + '%';
+            document.getElementById('economyBar').style.width = gameState.economy + '%';
+            document.getElementById('moraleBar').style.width = gameState.morale + '%';
+            document.getElementById('stressBar').style.width = gameState.stress + '%';
+
+            document.getElementById('turnCounter').textContent = gameState.turn;
+            document.getElementById('yearCounter').textContent = gameState.year;
+            document.getElementById('decisionCount').textContent = gameState.decisionHistory.length;
+        }
+
+        // Display Event with Dynamic Content
+        function displayEvent(event) {
+            gameState.currentEvent = event;
+            gameState.usedEvents.push(event.id);
+
+            document.getElementById('eventTitle').textContent = event.title;
+            document.getElementById('eventDescription').textContent = event.description;
+            
+            // Set real image
+            const eventImage = document.getElementById('eventImage');
+            eventImage.src = event.imageUrl;
+            document.getElementById('imageCredit').textContent = 'Source: ' + event.imageCredit;
+
+            // Update player context based on reputation
+            updatePlayerContext();
+            
+            const choicesContainer = document.getElementById('choicesContainer');
+            choicesContainer.innerHTML = '';
+
+            event.choices.forEach((choice, index) => {
+                const choiceDiv = document.createElement('div');
+                const isUnconstitutional = choice.is_constitutional === false;
+                
+                choiceDiv.className = `p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 hover:shadow-lg ${
+                    isUnconstitutional ? 'border-red-200 hover:border-red-400 constitutional-warning' : 'border-green-200 hover:border-green-400'
+                }`;
+                
+                choiceDiv.innerHTML = `
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-3">${isUnconstitutional ? '⚠️' : '✅'}</span>
+                        <div class="flex-1">
+                            <p class="font-semibold mb-2 ${isUnconstitutional ? 'text-red-800' : 'text-green-800'}">${choice.text}</p>
+                            <p class="text-sm text-gray-600 mb-2">${choice.outcome}</p>
+                            <div class="text-xs text-gray-500">
+                                Impact: ${formatEffects(choice.effects)} | Reputation: ${formatReputationChanges(choice.reputationChanges)}
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                choiceDiv.addEventListener('click', () => makeStrategicChoice(choice));
+                choicesContainer.appendChild(choiceDiv);
+            });
+        }
+
+        // Make Choice with Progressive Consequences
+        function makeStrategicChoice(choice) {
+            if (choice.is_constitutional === false) {
+                if (!confirm(`⚠️ CONSTITUTIONAL WARNING ⚠️\n\nThis choice may violate democratic principles and have severe long-term consequences. Your political legacy is at stake.\n\nProceed anyway?`)) {
+                    return;
+                }
+            }
+
+            // Record decision
+            gameState.decisionHistory.push({
+                turn: gameState.turn,
+                event: gameState.currentEvent.title,
+                choice: choice.text,
+                constitutional: choice.is_constitutional,
+                timestamp: Date.now()
+            });
+
+            // Apply effects
+            applyEffects(choice.effects);
+            applyReputationChanges(choice.reputationChanges);
+            
+            // Update traits based on choice
+            updatePlayerTraits(choice);
+            
+            // Check for crises
+            checkForCrises();
+            
+            // Update decision trail
+            updateDecisionTrail();
+            
+            // Check win/lose conditions
+            if (checkGameEnd()) return;
+            
+            // Show choice outcome
+            showChoiceOutcome(choice);
+        }
+
+        function updatePlayerContext() {
+            const highRep = Object.entries(gameState.reputation)
+                .filter(([faction, value]) => value > 70)
+                .map(([faction]) => faction);
+            
+            const lowRep = Object.entries(gameState.reputation)
+                .filter(([faction, value]) => value < 30)
+                .map(([faction]) => faction);
+            
+            let contextText = "Your political standing: ";
+            if (highRep.length > 0) {
+                contextText += `Strong support from ${highRep.join(', ')}. `;
+            }
+            if (lowRep.length > 0) {
+                contextText += `Tensions with ${lowRep.join(', ')}. `;
+            }
+            contextText += "This influences your available options and their consequences.";
+            
+            document.getElementById('playerContext').innerHTML = `
+                <p class="text-blue-800 text-sm">
+                    <strong>Your Political Standing:</strong> ${contextText}
+                </p>
+            `;
+        }
+
+        function updateDecisionTrail() {
+            const trail = document.getElementById('decisionTrail');
+            const lastDecision = gameState.decisionHistory[gameState.decisionHistory.length - 1];
+            
+            if (lastDecision) {
+                const trailItem = document.createElement('div');
+                trailItem.className = 'decision-trail bg-gray-100 p-2 rounded text-sm';
+                trailItem.innerHTML = `
+                    <span class="font-semibold">Turn ${lastDecision.turn}:</span> 
+                    ${lastDecision.event} → ${lastDecision.choice.substring(0, 50)}...
+                    <span class="${lastDecision.constitutional ? 'text-green-600' : 'text-red-600'}">
+                        ${lastDecision.constitutional ? '✓' : '⚠'}
+                    </span>
+                `;
+                trail.insertBefore(trailItem, trail.firstChild);
+            }
+        }
+
+        function applyEffects(effects) {
+            gameState.stability += effects.stability || 0;
+            gameState.economy += effects.economy || 0;
+            gameState.morale += effects.morale || 0;
+            gameState.stress += effects.stress || 0;
+            updateGameState();
+        }
+
+        function applyReputationChanges(changes) {
+            if (!changes) return;
+            for (let [faction, change] of Object.entries(changes)) {
+                gameState.reputation[faction] += change;
+            }
+            updateGameState();
+        }
+
+        function formatEffects(effects) {
+            const parts = [];
+            if (effects.stability) parts.push(`Stability ${effects.stability > 0 ? '+' : ''}${effects.stability}`);
+            if (effects.economy) parts.push(`Economy ${effects.economy > 0 ? '+' : ''}${effects.economy}`);
+            if (effects.morale) parts.push(`Morale ${effects.morale > 0 ? '+' : ''}${effects.morale}`);
+            if (effects.stress) parts.push(`Stress ${effects.stress > 0 ? '+' : ''}${effects.stress}`);
+            return parts.join(', ');
+        }
+
+        function formatReputationChanges(changes) {
+            if (!changes) return "None";
+            const parts = [];
+            for (let [faction, change] of Object.entries(changes)) {
+                parts.push(`${faction} ${change > 0 ? '+' : ''}${change}`);
+            }
+            return parts.join(', ');
+        }
+
+        function checkForCrises() {
+            // Crisis logic here - same as before but with reputation effects
+        }
+
+        function checkGameEnd() {
+            if (gameState.stability <= 0 || gameState.morale <= 0 || gameState.stress >= 100) {
+                endGame();
+                return true;
+            }
+            return false;
+        }
+
+        function endGame() {
+            document.getElementById('gameOverScreen').classList.remove('hidden');
+            generateFinalAnalytics();
+        }
+
+        function nextTurn() {
+            gameState.turn++;
+            if (gameState.turn % 4 === 0) gameState.year++;
+            
+            const nextEvent = selectNextEvent();
+            if (nextEvent) {
+                displayEvent(nextEvent);
+            }
+        }
+
+        function showChoiceOutcome(choice) {
+            setTimeout(() => {
+                alert(`📊 Decision Outcome:\n\n${choice.outcome}\n\nPolitical consequences will unfold over time...`);
+            }, 500);
+        }
+
+        function generateFinalAnalytics() {
+            // Create comprehensive end-game analysis
+        }
+
+        // Initialize game
+        updateGameState();
+        displayEvent(strategicEvents[0]);
+
+        // Event listeners
+        document.getElementById('nextTurnBtn').addEventListener('click', nextTurn);
+        document.getElementById('restartBtn').addEventListener('click', () => location.reload());
+        document.getElementById('viewAnalyticsBtn').addEventListener('click', () => {
+            const panel = document.getElementById('analyticsPanel');
+            panel.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

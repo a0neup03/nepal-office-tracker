@@ -1,0 +1,222 @@
+[
+  {
+    "id": "event_social_media_ban",
+    "title": "Gen Z Protest Against Social Media Ban",
+    "description": "Government has banned TikTok and restricted social media following protests. Youth are organizing through VPNs and encrypted messaging. International human rights groups express concern while security agencies claim necessity.",
+    "imageUrl": "https://kathmandupost.com/uploads/source/news/2024/genz-protest/genz-protest-main.jpg",
+    "imageCredit": "Kathmandu Post",
+    "source": "Based on recent social media restrictions during Nepal protests",
+    "tags": ["youth", "social_media", "freedom"],
+    "unlockConditions": { "stress": 20, "youth_reputation": 30 },
+    "currentEventScore": 95,
+    "recentNews": "September 2024 - Nepal government restricted social media platforms during youth-led protests",
+    "choices": [
+      {
+        "text": "Maintain ban citing national security and public order concerns",
+        "outcome": "Security agencies support you but international criticism intensifies. Youth find creative ways to organize resistance, making them more determined.",
+        "is_constitutional": false,
+        "constitutional_implication": "Social media bans violate Article 17 (Freedom of Expression) without proper legal justification and due process.",
+        "effects": { "stability": -20, "economy": -10, "morale": -30, "stress": 15 },
+        "reputationChanges": { "youth": -35, "military": 15, "international": -25, "media": -20 },
+        "traitsImpact": { "authoritarian": 15, "populist": -10 },
+        "unlocks": ["event_underground_resistance", "event_international_sanctions"]
+      },
+      {
+        "text": "Lift ban immediately and apologize for overreach",
+        "outcome": "Youth celebrate but security agencies question your resolve. Opposition calls you weak while civil society praises democratic values.",
+        "is_constitutional": true,
+        "constitutional_implication": "Restoring freedom of expression upholds constitutional rights and democratic principles.",
+        "effects": { "stability": 5, "economy": 5, "morale": 25, "stress": -10 },
+        "reputationChanges": { "youth": 30, "military": -15, "international": 20, "media": 15 },
+        "traitsImpact": { "reformist": 10, "authoritarian": -10 },
+        "unlocks": ["event_security_agency_revolt", "event_youth_alliance"]
+      },
+      {
+        "text": "Create regulated social media policy with content monitoring",
+        "outcome": "Compromise satisfies neither side completely. Tech-savvy youth circumvent restrictions while conservatives demand stronger action.",
+        "is_constitutional": true,
+        "constitutional_implication": "Reasonable regulation of speech can be constitutional if proportionate and legally justified.",
+        "effects": { "stability": -5, "economy": -5, "morale": 0, "stress": 8 },
+        "reputationChanges": { "youth": -10, "military": 5, "international": -5, "media": 5 },
+        "traitsImpact": { "reformist": 5, "authoritarian": 5 },
+        "unlocks": ["event_tech_regulation_debate"]
+      }
+    ]
+  },
+  {
+    "id": "event_constituent_assembly_burning",
+    "title": "Threats to Constituent Assembly Building",
+    "description": "Angry protesters threaten to storm and burn the Constituent Assembly building, echoing past incidents. Historical footage shows actual attacks on government buildings. Security forces await your orders.",
+    "imageUrl": "https://www.nepalitimes.com/assets/uploads/2015/09/Constituent-Assembly-building-Kathmandu.jpg",
+    "imageCredit": "Nepali Times",
+    "source": "Based on historical attacks on government buildings and current protest threats",
+    "tags": ["protest", "violence", "democracy"],
+    "unlockConditions": { "stress": 40, "stability": 50 },
+    "currentEventScore": 88,
+    "recentNews": "Historical reference: CA building has been target of political protests multiple times",
+    "choices": [
+      {
+        "text": "Deploy armed forces with shoot-on-sight orders to protect the building",
+        "outcome": "Building saved but democracy dies. International isolation follows as images of military firing on citizens spread globally.",
+        "is_constitutional": false,
+        "constitutional_implication": "Using excessive force against protesters violates fundamental rights and proportionality principles.",
+        "effects": { "stability": -40, "economy": -25, "morale": -50, "stress": 30 },
+        "reputationChanges": { "military": 20, "youth": -50, "international": -40, "media": -35 },
+        "traitsImpact": { "authoritarian": 25, "reformist": -20 },
+        "unlocks": ["event_international_isolation", "event_armed_resistance"]
+      },
+      {
+        "text": "Allow protesters to enter but ensure firefighters and ambulances are ready",
+        "outcome": "Symbol of democracy burns but no lives lost. International community praises restraint while conservatives call you weak.",
+        "is_constitutional": true,
+        "constitutional_implication": "Prioritizing human life over property while allowing peaceful protest aligns with constitutional values.",
+        "effects": { "stability": -25, "economy": -15, "morale": 15, "stress": 10 },
+        "reputationChanges": { "youth": 20, "military": -20, "international": 15, "media": 10 },
+        "traitsImpact": { "reformist": 15, "authoritarian": -15 },
+        "unlocks": ["event_rebuilding_democracy", "event_conservative_backlash"]
+      },
+      {
+        "text": "Meet protesters at the building entrance and negotiate personally",
+        "outcome": "Historic confrontation that either makes you a legend or ends your career. Media captures every word of this defining moment.",
+        "is_constitutional": true,
+        "constitutional_implication": "Direct democratic engagement respects citizens' right to petition government and peaceful assembly.",
+        "effects": { "stability": 20, "economy": 0, "morale": 35, "stress": -20 },
+        "reputationChanges": { "youth": 35, "military": -10, "international": 25, "media": 30 },
+        "traitsImpact": { "populist": 20, "reformist": 15 },
+        "unlocks": ["event_populist_hero", "event_security_concerns"]
+      }
+    ]
+  },
+  {
+    "id": "event_everest_permit_deaths",
+    "title": "Record Deaths on Everest Due to Permit Corruption",
+    "description": "21 climbers have died this season due to fake permits sold to unqualified climbers. International climbing community demands action. Your Tourism Minister's family runs the permit processing company.",
+    "imageUrl": "https://www.aljazeera.com/wp-content/uploads/2023/05/2023-05-17T045928Z_1837334138_RC2Y81AMM0VJ_RTRMADP_3_CLIMBING-EVEREST.jpg",
+    "imageCredit": "Al Jazeera/Reuters",
+    "source": "Based on recurring Everest climbing deaths and permit irregularities",
+    "tags": ["corruption", "tourism", "international"],
+    "unlockConditions": { "economy": 40, "corruption_trait": 10 },
+    "currentEventScore": 92,
+    "recentNews": "2023-2024: Record number of climbing deaths on Everest due to overcrowding and unqualified climbers",
+    "choices": [
+      {
+        "text": "Protect Tourism Minister - blame deaths on climate change and bad weather",
+        "outcome": "International climbing boycott destroys tourism industry. Bodies pile up while your minister builds Swiss mansion from permit fees.",
+        "is_constitutional": false,
+        "constitutional_implication": "Protecting corruption while people die violates duty of care and honest governance obligations.",
+        "effects": { "stability": -35, "economy": -40, "morale": -35, "stress": 25 },
+        "reputationChanges": { "international": -50, "media": -30, "military": -10 },
+        "traitsImpact": { "corrupt": 20, "reformist": -15 },
+        "unlocks": ["event_tourism_boycott", "event_international_investigation"]
+      },
+      {
+        "text": "Arrest Tourism Minister publicly and overhaul entire permit system",
+        "outcome": "International community applauds action. Climbing deaths decrease but tourism revenue drops temporarily during system overhaul.",
+        "is_constitutional": true,
+        "constitutional_implication": "Ensuring accountability and public safety is core governmental duty under rule of law.",
+        "effects": { "stability": 20, "economy": -20, "morale": 25, "stress": -15 },
+        "reputationChanges": { "international": 30, "media": 25, "military": 10 },
+        "traitsImpact": { "reformist": 20, "corrupt": -15 },
+        "unlocks": ["event_tourism_reform", "event_ministerial_loyalty_test"]
+      },
+      {
+        "text": "Create international oversight committee for Everest permits",
+        "outcome": "Foreign involvement angers nationalists but saves lives. Nepal loses some control but gains credibility in adventure tourism.",
+        "is_constitutional": true,
+        "constitutional_implication": "International cooperation for public safety is permissible under sovereign decision-making.",
+        "effects": { "stability": 10, "economy": 10, "morale": 15, "stress": 5 },
+        "reputationChanges": { "international": 20, "nationalist": -15, "media": 15 },
+        "traitsImpact": { "reformist": 10, "nationalist": -10 },
+        "unlocks": ["event_nationalist_backlash", "event_international_partnership"]
+      }
+    ]
+  },
+  {
+    "id": "event_earthquake_relief_scandal",
+    "title": "Earthquake Relief Fund Investigation Reveals Massive Corruption",
+    "description": "Audit reveals $1.5 billion in earthquake relief funds was diverted through fake NGOs. Earthquake victims still live in temporary shelters 8 years later while relief coordinators own luxury properties.",
+    "imageUrl": "https://www.aljazeera.com/wp-content/uploads/2020/04/000_1QR8CQ.jpg",
+    "imageCredit": "Al Jazeera/AFP",
+    "source": "Based on ongoing issues with 2015 earthquake relief distribution",
+    "tags": ["corruption", "disaster", "international"],
+    "unlockConditions": { "international_reputation": 40, "turn": 10 },
+    "currentEventScore": 94,
+    "recentNews": "Ongoing investigations into earthquake relief fund distribution inefficiencies",
+    "choices": [
+      {
+        "text": "Blame previous governments and distance yourself from the scandal",
+        "outcome": "Political survival tactic that fools no one. International donors lose faith in Nepal's governance entirely. No new aid comes.",
+        "is_constitutional": true,
+        "constitutional_implication": "While not illegal, this undermines accountability principles expected in democratic governance.",
+        "effects": { "stability": -15, "economy": -30, "morale": -25, "stress": 20 },
+        "reputationChanges": { "international": -35, "media": -20, "youth": -15 },
+        "traitsImpact": { "corrupt": 10, "reformist": -10 },
+        "unlocks": ["event_aid_cutoff", "event_credibility_crisis"]
+      },
+      {
+        "text": "Launch massive anti-corruption drive and recover stolen funds",
+        "outcome": "Herculean task that makes enemies but restores faith. Some funds recovered, major politicians arrested, institutions strengthened.",
+        "is_constitutional": true,
+        "constitutional_implication": "Anti-corruption enforcement is constitutional duty and enhances rule of law.",
+        "effects": { "stability": 15, "economy": 20, "morale": 30, "stress": -10 },
+        "reputationChanges": { "international": 30, "media": 25, "youth": 20 },
+        "traitsImpact": { "reformist": 25, "corrupt": -20 },
+        "unlocks": ["event_corruption_trials", "event_institutional_reform"]
+      },
+      {
+        "text": "Establish transparent blockchain system for all future aid distribution",
+        "outcome": "Cutting-edge solution that impresses tech community but confuses older politicians. Future aid is corruption-proof but slower to distribute.",
+        "is_constitutional": true,
+        "constitutional_implication": "Technology solutions for transparency enhance democratic accountability and good governance.",
+        "effects": { "stability": 25, "economy": 15, "morale": 20, "stress": -5 },
+        "reputationChanges": { "international": 25, "youth": 30, "media": 20 },
+        "traitsImpact": { "reformist": 20, "populist": 10 },
+        "unlocks": ["event_digital_governance", "event_tech_revolution"]
+      }
+    ]
+  },
+  {
+    "id": "event_india_blockade_2024",
+    "title": "New India Border Restrictions Following China Deal",
+    "description": "India has quietly imposed 'enhanced security checks' at all border crossings after Nepal signed infrastructure deals with China. Essential supplies are delayed, fuel prices rising.",
+    "imageUrl": "https://www.aljazeera.com/wp-content/uploads/2020/11/000_8UT8DH.jpg",
+    "imageCredit": "Al Jazeera/AFP", 
+    "source": "Based on recurring Nepal-India border tensions over China relations",
+    "tags": ["foreign_policy", "sovereignty", "economy"],
+    "unlockConditions": { "turn": 15, "economy": 50 },
+    "currentEventScore": 90,
+    "recentNews": "Ongoing tensions between Nepal's China engagement and India's security concerns",
+    "choices": [
+      {
+        "text": "Cancel China deals immediately and apologize to India",
+        "outcome": "Borders reopen but you look like a puppet state. China cancels all investments. Opposition calls you traitor to sovereignty.",
+        "is_constitutional": true,
+        "constitutional_implication": "While legal, surrendering to foreign pressure undermines national sovereignty principles.",
+        "effects": { "stability": -30, "economy": -25, "morale": -35, "stress": 20 },
+        "reputationChanges": { "international": -20, "nationalist": -40, "youth": -25 },
+        "traitsImpact": { "nationalist": -20, "corrupt": 10 },
+        "unlocks": ["event_puppet_state", "event_sovereignty_lost"]
+      },
+      {
+        "text": "Mobilize public for 'Dignity and Sovereignty Movement' against blockade",
+        "outcome": "Patriotic fervor rises but people suffer. You become symbol of resistance or stubborn fool. International community watches carefully.",
+        "is_constitutional": true,
+        "constitutional_implication": "Defending sovereignty is constitutional duty, though public welfare must be considered.",
+        "effects": { "stability": 10, "economy": -35, "morale": 25, "stress": 25 },
+        "reputationChanges": { "nationalist": 35, "youth": 15, "international": 10 },
+        "traitsImpact": { "nationalist": 25, "populist": 15 },
+        "unlocks": ["event_sovereignty_hero", "event_economic_collapse"]
+      },
+      {
+        "text": "Seek international mediation through UN and propose trilateral dialogue",
+        "outcome": "Diplomatic solution that may work but takes time. India resents internationalization while China stays neutral. Long-term approach.",
+        "is_constitutional": true,
+        "constitutional_implication": "Multilateral diplomacy aligns with peaceful coexistence and international law principles.",
+        "effects": { "stability": 15, "economy": -10, "morale": 10, "stress": 10 },
+        "reputationChanges": { "international": 25, "media": 15, "military": 5 },
+        "traitsImpact": { "reformist": 15, "nationalist": 5 },
+        "unlocks": ["event_diplomatic_success", "event_prolonged_crisis"]
+      }
+    ]
+  }
+]
