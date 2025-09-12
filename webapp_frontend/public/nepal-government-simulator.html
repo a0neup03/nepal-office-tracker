@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🇳🇵 Nepal Government Simulator - Constitutional Leadership Challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .metric-bar {
+            transition: width 0.5s ease-in-out;
+        }
+        .constitutional-warning {
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+        }
+        .crisis-alert {
+            animation: shake 0.5s ease-in-out;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-red-600 via-blue-600 to-red-600 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="bg-white rounded-lg shadow-2xl p-6 mb-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="text-4xl">🇳🇵</div>
+                    <div>
+                        <h1 class="text-3xl font-bold text-gray-800">Nepal Government Simulator</h1>
+                        <p class="text-gray-600">Constitutional Leadership Challenge</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-gray-500">Turn <span id="turnCounter">1</span></div>
+                    <div class="text-sm text-gray-500">Year <span id="yearCounter">2024</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Metrics Dashboard -->
+        <div class="grid md:grid-cols-4 gap-4 mb-6">
+            <!-- Political Stability -->
+            <div class="bg-white rounded-lg shadow-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">🏛️ Political Stability</h3>
+                    <span id="stabilityValue" class="text-lg font-bold text-blue-600">75</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                    <div id="stabilityBar" class="metric-bar bg-blue-500 h-3 rounded-full" style="width: 75%"></div>
+                </div>
+            </div>
+
+            <!-- Economic Prosperity -->
+            <div class="bg-white rounded-lg shadow-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">💰 Economic Prosperity</h3>
+                    <span id="economyValue" class="text-lg font-bold text-green-600">60</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                    <div id="economyBar" class="metric-bar bg-green-500 h-3 rounded-full" style="width: 60%"></div>
+                </div>
+            </div>
+
+            <!-- Public Morale -->
+            <div class="bg-white rounded-lg shadow-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">😊 Public Morale</h3>
+                    <span id="moraleValue" class="text-lg font-bold text-purple-600">70</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                    <div id="moraleBar" class="metric-bar bg-purple-500 h-3 rounded-full" style="width: 70%"></div>
+                </div>
+            </div>
+
+            <!-- Systemic Stress (Hidden Score) -->
+            <div class="bg-white rounded-lg shadow-lg p-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">⚠️ System Stress</h3>
+                    <span id="stressValue" class="text-lg font-bold text-red-600">15</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                    <div id="stressBar" class="metric-bar bg-red-500 h-3 rounded-full" style="width: 15%"></div>
+                </div>
+                <div class="text-xs text-gray-500 mt-1">High stress triggers crises</div>
+            </div>
+        </div>
+
+        <!-- Current Event Card -->
+        <div class="bg-white rounded-lg shadow-2xl p-8 mb-6">
+            <div id="eventImage" class="w-full h-48 bg-gray-200 rounded-lg mb-6 flex items-center justify-center">
+                <div class="text-6xl">🏛️</div>
+            </div>
+            
+            <div class="mb-4">
+                <h2 id="eventTitle" class="text-2xl font-bold text-gray-800 mb-3">
+                    Supreme Court Justice Appointment Crisis
+                </h2>
+                <p id="eventDescription" class="text-gray-600 leading-relaxed mb-4">
+                    The Judicial Council has recommended candidates for vacant Supreme Court positions, but political parties are pressuring you to influence the selection process. International observers and civil society are watching closely, while your coalition partners demand appointees favorable to their interests.
+                </p>
+                <div id="historicalContext" class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+                    <p class="text-blue-800 text-sm">
+                        <strong>Historical Context:</strong> This situation mirrors the 2020 judicial appointments controversy that led to widespread criticism of political interference in the judiciary.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Choices -->
+            <div id="choicesContainer" class="space-y-4">
+                <!-- Choices will be dynamically generated here -->
+            </div>
+        </div>
+
+        <!-- Game Status & Alerts -->
+        <div id="alertsContainer" class="mb-6">
+            <!-- Crisis alerts and notifications appear here -->
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex justify-center space-x-4">
+            <button id="nextTurnBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-200">
+                Continue Governance
+            </button>
+            <button id="restartBtn" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg transition duration-200">
+                Restart Game
+            </button>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+                <h2 class="text-2xl font-bold text-center mb-4" id="gameOverTitle">Government Falls!</h2>
+                <p class="text-gray-600 text-center mb-6" id="gameOverMessage">Your administration has collapsed due to accumulated crises.</p>
+                <div class="flex justify-center">
+                    <button id="playAgainBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">
+                        Try Again
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Game State
+        let gameState = {
+            turn: 1,
+            year: 2024,
+            stability: 75,
+            economy: 60,
+            morale: 70,
+            stress: 15,
+            currentEvent: null,
+            usedEvents: []
+        };
+
+        // Sample Game Events (Based on Real Nepal Political Situations)
+        const gameEvents = [
+            {
+                id: "event_01",
+                title: "Supreme Court Justice Appointment Crisis",
+                description: "The Judicial Council has recommended candidates for vacant Supreme Court positions, but political parties are pressuring you to influence the selection process. International observers and civil society are watching closely.",
+                source_article: "Based on Nepal's ongoing judicial independence debates",
+                image_placeholder: "🏛️",
+                tags: ["judiciary", "constitutional"],
+                historical_context: "This situation mirrors the 2020 judicial appointments controversy that led to widespread criticism of political interference in the judiciary.",
+                prerequisites: { min_stability: 0, max_stability: 100, required_turn: 1 },
+                choices: [
+                    {
+                        text: "Pressure the Judicial Council to appoint party loyalists to ensure favorable rulings",
+                        outcome: "Your political agenda gains protection, but this blatant interference destroys public faith in judicial independence and triggers massive protests.",
+                        is_constitutional: false,
+                        constitutional_implication: "This violates Article 128 of the Constitution which guarantees judicial independence and the separation of powers principle.",
+                        effects: { stability: -25, economy: 5, morale: -20, stress: 15 }
+                    },
+                    {
+                        text: "Respect the Judicial Council's recommendations and support transparent appointments",
+                        outcome: "The appointments are seen as fair and legitimate, strengthening institutional trust. However, you may face less favorable court decisions.",
+                        is_constitutional: true,
+                        constitutional_implication: "This upholds Article 128 and maintains the constitutional principle of judicial independence.",
+                        effects: { stability: 15, economy: -5, morale: 15, stress: -2 }
+                    },
+                    {
+                        text: "Delay the appointments indefinitely, claiming need for 'further consultation'",
+                        outcome: "You avoid immediate conflict but the judiciary remains weakened. Legal cases pile up and public frustration grows.",
+                        is_constitutional: false,
+                        constitutional_implication: "Deliberately delaying constitutional appointments violates the duty to ensure functioning governance.",
+                        effects: { stability: -10, economy: -10, morale: -10, stress: 8 }
+                    }
+                ]
+            },
+            {
+                id: "event_02", 
+                title: "Provincial Government Coalition Crisis",
+                description: "Your party has lost majority in Lumbini Province as coalition partners withdraw support. The provincial chief minister faces a no-confidence motion, potentially affecting federal politics.",
+                source_article: "Based on frequent coalition changes in Nepal's provincial politics",
+                image_placeholder: "🏛️",
+                tags: ["coalition", "federalism"],
+                historical_context: "Similar to the 2021 crisis in Gandaki Province where multiple government changes weakened federal-provincial coordination.",
+                prerequisites: { min_stability: 0, max_stability: 80, required_turn: 3 },
+                choices: [
+                    {
+                        text: "Use federal resources and positions to buy back coalition support",
+                        outcome: "You maintain the provincial government but at great financial cost and damage to your anti-corruption stance.",
+                        is_constitutional: false,
+                        constitutional_implication: "Using federal resources for provincial politics violates the principle of federalism and proper use of public funds.",
+                        effects: { stability: -15, economy: -20, morale: -15, stress: 10 }
+                    },
+                    {
+                        text: "Accept the democratic process and prepare for opposition provincial government",
+                        outcome: "Your party loses provincial power but democratic norms are respected. Opposition collaboration becomes necessary for development projects.",
+                        is_constitutional: true,
+                        constitutional_implication: "Respecting democratic processes upholds constitutional federalism and peaceful transfer of power.",
+                        effects: { stability: 10, economy: -5, morale: 5, stress: -3 }
+                    }
+                ]
+            },
+            {
+                id: "event_03",
+                title: "Chinese Investment vs Indian Security Concerns",
+                description: "China offers a massive infrastructure loan for the East-West Railway, but India expresses serious security concerns. Both neighbors are pressuring Nepal for a clear stance.",
+                source_article: "Based on Nepal's ongoing balancing act between China and India",
+                image_placeholder: "🚄",
+                tags: ["foreign_policy", "economy"],
+                historical_context: "Echoes the 2020 border tensions and the delicate balance Nepal maintains between its two giant neighbors.",
+                prerequisites: { min_stability: 40, max_stability: 100, required_turn: 5 },
+                choices: [
+                    {
+                        text: "Accept Chinese investment and downplay Indian concerns",
+                        outcome: "Economic prospects improve dramatically but relations with India deteriorate, affecting trade and border security.",
+                        is_constitutional: true,
+                        constitutional_implication: "Nepal has the sovereign right to choose development partners under Article 50.",
+                        effects: { stability: -10, economy: 25, morale: 10, stress: 12 }
+                    },
+                    {
+                        text: "Reject Chinese offer to maintain good relations with India",
+                        outcome: "India appreciates your choice and increases cooperation, but you miss crucial development opportunities and face public criticism.",
+                        is_constitutional: true,
+                        constitutional_implication: "Sovereign decision-making in foreign policy is constitutionally protected.",
+                        effects: { stability: 5, economy: -15, morale: -10, stress: 8 }
+                    },
+                    {
+                        text: "Propose a trilateral partnership involving both India and China",
+                        outcome: "Your diplomatic balancing act is praised internationally but both neighbors remain suspicious, creating complex negotiations.",
+                        is_constitutional: true,
+                        constitutional_implication: "Balanced foreign policy aligns with Nepal's constitutional commitment to non-alignment.",
+                        effects: { stability: 15, economy: 5, morale: 15, stress: 5 }
+                    }
+                ]
+            }
+        ];
+
+        // Crisis Events (triggered by high stress)
+        const crisisEvents = [
+            {
+                threshold: 25,
+                title: "Public Protests Erupt",
+                description: "Widespread demonstrations against government policies have begun in major cities.",
+                effects: { stability: -15, morale: -10, stress: 5 }
+            },
+            {
+                threshold: 50,
+                title: "No-Confidence Motion Filed",
+                description: "Opposition parties have filed a no-confidence motion in Parliament.",
+                effects: { stability: -25, morale: -15, stress: 10 }
+            },
+            {
+                threshold: 75,
+                title: "Constitutional Crisis",
+                description: "The President and Supreme Court are questioning the government's constitutional authority.",
+                effects: { stability: -30, morale: -20, stress: 15 }
+            }
+        ];
+
+        // Game Engine Functions
+        function updateMetrics() {
+            // Ensure metrics stay within bounds
+            gameState.stability = Math.max(0, Math.min(100, gameState.stability));
+            gameState.economy = Math.max(0, Math.min(100, gameState.economy));
+            gameState.morale = Math.max(0, Math.min(100, gameState.morale));
+            gameState.stress = Math.max(0, Math.min(100, gameState.stress));
+
+            // Update UI
+            document.getElementById('stabilityValue').textContent = gameState.stability;
+            document.getElementById('economyValue').textContent = gameState.economy;
+            document.getElementById('moraleValue').textContent = gameState.morale;
+            document.getElementById('stressValue').textContent = gameState.stress;
+
+            document.getElementById('stabilityBar').style.width = gameState.stability + '%';
+            document.getElementById('economyBar').style.width = gameState.economy + '%';
+            document.getElementById('moraleBar').style.width = gameState.morale + '%';
+            document.getElementById('stressBar').style.width = gameState.stress + '%';
+
+            document.getElementById('turnCounter').textContent = gameState.turn;
+            document.getElementById('yearCounter').textContent = gameState.year;
+        }
+
+        function checkForCrisis() {
+            for (let crisis of crisisEvents) {
+                if (gameState.stress >= crisis.threshold && !crisis.triggered) {
+                    crisis.triggered = true;
+                    showCrisisAlert(crisis);
+                    applyEffects(crisis.effects);
+                }
+            }
+        }
+
+        function showCrisisAlert(crisis) {
+            const alertsContainer = document.getElementById('alertsContainer');
+            const alertDiv = document.createElement('div');
+            alertDiv.className = 'crisis-alert bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4';
+            alertDiv.innerHTML = `
+                <div class="flex items-center">
+                    <span class="text-2xl mr-3">🚨</span>
+                    <div>
+                        <strong class="font-bold">${crisis.title}</strong>
+                        <p class="text-sm">${crisis.description}</p>
+                    </div>
+                </div>
+            `;
+            alertsContainer.appendChild(alertDiv);
+        }
+
+        function selectNextEvent() {
+            // Filter available events based on prerequisites
+            const availableEvents = gameEvents.filter(event => {
+                if (gameState.usedEvents.includes(event.id)) return false;
+                
+                const prereq = event.prerequisites;
+                return gameState.stability >= prereq.min_stability && 
+                       gameState.stability <= prereq.max_stability &&
+                       gameState.turn >= prereq.required_turn;
+            });
+
+            if (availableEvents.length === 0) {
+                endGame("You have navigated all available scenarios!");
+                return null;
+            }
+
+            // Select random event from available ones
+            return availableEvents[Math.floor(Math.random() * availableEvents.length)];
+        }
+
+        function displayEvent(event) {
+            gameState.currentEvent = event;
+            gameState.usedEvents.push(event.id);
+
+            document.getElementById('eventTitle').textContent = event.title;
+            document.getElementById('eventDescription').textContent = event.description;
+            document.getElementById('historicalContext').innerHTML = `
+                <p class="text-blue-800 text-sm">
+                    <strong>Historical Context:</strong> ${event.historical_context}
+                </p>
+            `;
+
+            const choicesContainer = document.getElementById('choicesContainer');
+            choicesContainer.innerHTML = '';
+
+            event.choices.forEach((choice, index) => {
+                const choiceDiv = document.createElement('div');
+                choiceDiv.className = `p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 hover:shadow-lg ${
+                    choice.is_constitutional ? 'border-green-200 hover:border-green-400' : 'border-red-200 hover:border-red-400 constitutional-warning'
+                }`;
+                
+                choiceDiv.innerHTML = `
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-3">${choice.is_constitutional ? '✅' : '⚠️'}</span>
+                        <div class="flex-1">
+                            <p class="font-semibold mb-2 ${choice.is_constitutional ? 'text-green-800' : 'text-red-800'}">${choice.text}</p>
+                            <p class="text-sm text-gray-600 mb-2">${choice.outcome}</p>
+                            ${!choice.is_constitutional ? `
+                                <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-2">
+                                    <p class="text-xs text-red-800"><strong>Constitutional Warning:</strong> ${choice.constitutional_implication}</p>
+                                </div>
+                            ` : `
+                                <div class="bg-green-50 border-l-4 border-green-400 p-2 mt-2">
+                                    <p class="text-xs text-green-800"><strong>Constitutional:</strong> ${choice.constitutional_implication}</p>
+                                </div>
+                            `}
+                        </div>
+                    </div>
+                `;
+
+                choiceDiv.addEventListener('click', () => makeChoice(choice));
+                choicesContainer.appendChild(choiceDiv);
+            });
+        }
+
+        function makeChoice(choice) {
+            if (!choice.is_constitutional) {
+                if (!confirm(`⚠️ CONSTITUTIONAL WARNING ⚠️\n\n${choice.constitutional_implication}\n\nThis choice may severely damage your government's legitimacy. Are you sure you want to proceed?`)) {
+                    return;
+                }
+            }
+
+            applyEffects(choice.effects);
+            checkForCrisis();
+            checkGameEnd();
+
+            // Show choice outcome
+            alert(`📊 Choice Made: ${choice.outcome}`);
+        }
+
+        function applyEffects(effects) {
+            gameState.stability += effects.stability || 0;
+            gameState.economy += effects.economy || 0;
+            gameState.morale += effects.morale || 0;
+            gameState.stress += effects.stress || 0;
+
+            updateMetrics();
+        }
+
+        function checkGameEnd() {
+            if (gameState.stability <= 0) {
+                endGame("Your government has collapsed due to political instability!");
+            } else if (gameState.morale <= 0) {
+                endGame("Widespread civil unrest has forced your resignation!");
+            } else if (gameState.stress >= 100) {
+                endGame("Systemic breakdown has made governance impossible!");
+            }
+        }
+
+        function endGame(message) {
+            document.getElementById('gameOverTitle').textContent = "Game Over";
+            document.getElementById('gameOverMessage').textContent = message;
+            document.getElementById('gameOverScreen').classList.remove('hidden');
+        }
+
+        function nextTurn() {
+            gameState.turn++;
+            if (gameState.turn % 4 === 0) {
+                gameState.year++;
+            }
+
+            const nextEvent = selectNextEvent();
+            if (nextEvent) {
+                displayEvent(nextEvent);
+            }
+        }
+
+        function restartGame() {
+            gameState = {
+                turn: 1,
+                year: 2024,
+                stability: 75,
+                economy: 60,
+                morale: 70,
+                stress: 15,
+                currentEvent: null,
+                usedEvents: []
+            };
+
+            // Reset crisis triggers
+            crisisEvents.forEach(crisis => crisis.triggered = false);
+
+            document.getElementById('alertsContainer').innerHTML = '';
+            document.getElementById('gameOverScreen').classList.add('hidden');
+            
+            updateMetrics();
+            displayEvent(gameEvents[0]);
+        }
+
+        // Event Listeners
+        document.getElementById('nextTurnBtn').addEventListener('click', nextTurn);
+        document.getElementById('restartBtn').addEventListener('click', restartGame);
+        document.getElementById('playAgainBtn').addEventListener('click', restartGame);
+
+        // Initialize Game
+        updateMetrics();
+        displayEvent(gameEvents[0]);
+    </script>
+</body>
+</html>

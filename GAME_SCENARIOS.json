@@ -1,0 +1,172 @@
+[
+  {
+    "id": "event_04",
+    "title": "Parliament Dissolution Constitutional Crisis",
+    "description": "Opposition parties are pressuring you to dissolve parliament claiming legislative gridlock, while constitutional experts warn this could trigger a major constitutional crisis. The President is seeking your formal advice on the dissolution request.",
+    "source_article": "Based on 2020-2021 parliament dissolution crisis under KP Sharma Oli",
+    "image_search_query": "Nepal Parliament Singha Durbar building",
+    "image_source_credit": "Government of Nepal",
+    "tags": ["constitutional", "parliament"],
+    "historical_context": "This mirrors the 2020-2021 crisis when PM Oli dissolved parliament twice, both times overruled by the Supreme Court as unconstitutional.",
+    "prerequisites": { "min_stability": 0, "max_stability": 60, "required_turn": 6 },
+    "choices": [
+      {
+        "text": "Recommend parliament dissolution to break the political deadlock",
+        "outcome": "Parliament is dissolved but the Supreme Court may intervene. Political chaos ensues while elections are prepared.",
+        "is_constitutional": false,
+        "constitutional_implication": "Parliament dissolution without proper constitutional grounds violates Article 85 and democratic principles.",
+        "effects": { "stability": -30, "economy": -15, "morale": -20, "stress": 20 }
+      },
+      {
+        "text": "Work within parliament to build consensus and avoid dissolution",
+        "outcome": "You demonstrate democratic commitment but face continued legislative challenges. Progress is slow but constitutional.",
+        "is_constitutional": true,
+        "constitutional_implication": "Respects Article 85 and maintains parliamentary democracy's constitutional framework.",
+        "effects": { "stability": 10, "economy": -5, "morale": 5, "stress": -5 }
+      },
+      {
+        "text": "Propose constitutional amendment to clarify dissolution powers",
+        "outcome": "Long-term thinking but requires two-thirds majority. Opens debate about constitutional reform needs.",
+        "is_constitutional": true,
+        "constitutional_implication": "Constitutional amendment follows proper procedures under Article 274.",
+        "effects": { "stability": 5, "economy": 0, "morale": 10, "stress": 3 }
+      }
+    ]
+  },
+  {
+    "id": "event_05",
+    "title": "Lumbini Province Coalition Collapse",
+    "description": "Your party has lost majority in Lumbini Province as the CPN-Maoist Centre has withdrawn support. The Chief Minister must face a confidence vote within 30 days or resign. Provincial development projects worth billions are at stake.",
+    "source_article": "Based on April 2023 Lumbini Province government change",
+    "image_search_query": "Lumbini Province Assembly Nepal",
+    "image_source_credit": "Lumbini Province Government",
+    "tags": ["coalition", "federalism"],
+    "historical_context": "Similar to the 2023 crisis where UML's Lila Giri failed confidence vote, leading to Nepali Congress takeover in Lumbini.",
+    "prerequisites": { "min_stability": 20, "max_stability": 80, "required_turn": 4 },
+    "choices": [
+      {
+        "text": "Use federal influence and resources to pressure provincial assembly members",
+        "outcome": "You may retain the province but face corruption allegations and damage to federal-provincial relations.",
+        "is_constitutional": false,
+        "constitutional_implication": "Violates federalism principles under Article 56 and constitutes misuse of federal resources.",
+        "effects": { "stability": -20, "economy": -15, "morale": -15, "stress": 15 }
+      },
+      {
+        "text": "Accept democratic outcome and cooperate with new provincial government",
+        "outcome": "Opposition takes control but democratic norms are respected. You must negotiate for provincial cooperation.",
+        "is_constitutional": true,
+        "constitutional_implication": "Upholds democratic federalism and Article 168 on provincial governance.",
+        "effects": { "stability": 15, "economy": -10, "morale": 10, "stress": -3 }
+      },
+      {
+        "text": "Attempt to form new coalition with other parties in the province",
+        "outcome": "Democratic maneuvering that may or may not succeed. Shows commitment to constitutional processes.",
+        "is_constitutional": true,
+        "constitutional_implication": "Follows constitutional procedures for government formation under Article 168.",
+        "effects": { "stability": 5, "economy": -5, "morale": 5, "stress": 5 }
+      }
+    ]
+  },
+  {
+    "id": "event_06",
+    "title": "China's Belt and Road Initiative vs Indian Security Concerns",
+    "description": "China is offering Nepal participation in the Belt and Road Initiative with massive infrastructure funding, but India has expressed serious security concerns and threatened to review trade agreements if Nepal proceeds.",
+    "source_article": "Based on ongoing Nepal-China-India triangular dynamics",
+    "image_search_query": "Nepal China India border map infrastructure",
+    "image_source_credit": "International Relations Archives",
+    "tags": ["foreign_policy", "economy"],
+    "historical_context": "Reflects Nepal's perpetual balancing act between China and India, reminiscent of debates around Chinese investment projects since 2017.",
+    "prerequisites": { "min_stability": 40, "max_stability": 100, "required_turn": 7 },
+    "choices": [
+      {
+        "text": "Sign BRI agreement despite Indian objections, prioritizing economic development",
+        "outcome": "Massive development potential but India may impose trade restrictions. Relations with southern neighbor deteriorate significantly.",
+        "is_constitutional": true,
+        "constitutional_implication": "Nepal has sovereign right to choose development partners under Article 50.",
+        "effects": { "stability": -15, "economy": 30, "morale": 10, "stress": 15 }
+      },
+      {
+        "text": "Reject BRI to maintain good relations with India",
+        "outcome": "India appreciates your choice but you miss crucial development opportunities. Public questions your independence.",
+        "is_constitutional": true,
+        "constitutional_implication": "Sovereign decision-making in foreign policy is constitutionally protected.",
+        "effects": { "stability": 5, "economy": -20, "morale": -15, "stress": 10 }
+      },
+      {
+        "text": "Propose trilateral cooperation framework involving China, India, and Nepal",
+        "outcome": "Innovative diplomacy that could benefit all three countries but requires complex negotiations and may satisfy no one fully.",
+        "is_constitutional": true,
+        "constitutional_implication": "Balanced foreign policy aligns with constitutional commitment to peaceful coexistence.",
+        "effects": { "stability": 20, "economy": 10, "morale": 20, "stress": 8 }
+      }
+    ]
+  },
+  {
+    "id": "event_07",
+    "title": "Gen Z Protest Movement Against Government",
+    "description": "Massive youth-led protests have erupted across major cities demanding 'mass resignations' and system change. Social media bans have only intensified the movement. International attention is growing.",
+    "source_article": "Based on September 2024 Gen Z protests in Nepal",
+    "image_search_query": "Nepal youth protest Kathmandu 2024",
+    "image_source_credit": "Nepal News Agency",
+    "tags": ["social_unrest", "youth"],
+    "historical_context": "Reminiscent of the 1990 and 2006 people's movements, but with social media-driven Gen Z characteristics.",
+    "prerequisites": { "min_morale": 0, "max_morale": 50, "required_turn": 8 },
+    "choices": [
+      {
+        "text": "Use police force to disperse protests and maintain social media restrictions",
+        "outcome": "Immediate order restored but international criticism mounts. Youth anger intensifies and may lead to broader uprising.",
+        "is_constitutional": false,
+        "constitutional_implication": "Excessive force and media restrictions violate fundamental rights under Articles 17 and 19.",
+        "effects": { "stability": -25, "economy": -10, "morale": -30, "stress": 25 }
+      },
+      {
+        "text": "Meet with protest leaders and address their key demands for transparency and accountability",
+        "outcome": "Shows democratic responsiveness and may defuse tensions. However, you may have to make difficult compromises.",
+        "is_constitutional": true,
+        "constitutional_implication": "Respects freedom of assembly and expression under Articles 17 and 19.",
+        "effects": { "stability": 10, "economy": -5, "morale": 25, "stress": -10 }
+      },
+      {
+        "text": "Call for early elections to let people decide on the government's mandate",
+        "outcome": "Democratic solution but creates uncertainty and may not address underlying systemic issues the youth are protesting.",
+        "is_constitutional": true,
+        "constitutional_implication": "Democratic accountability through elections upholds constitutional governance principles.",
+        "effects": { "stability": 5, "economy": -15, "morale": 15, "stress": 10 }
+      }
+    ]
+  },
+  {
+    "id": "event_08",
+    "title": "Federal Budget Allocation Dispute with Provinces",
+    "description": "Several provinces are threatening legal action over federal budget allocations, claiming the distribution violates constitutional provisions for equitable development. The Supreme Court may need to intervene.",
+    "source_article": "Based on ongoing federal-provincial fiscal disputes in Nepal",
+    "image_search_query": "Nepal federal budget allocation chart provinces",
+    "image_source_credit": "Ministry of Finance Nepal",
+    "tags": ["federalism", "economy"],
+    "historical_context": "Reflects ongoing challenges in implementing fiscal federalism since the 2015 Constitution, similar to disputes seen annually since 2018.",
+    "prerequisites": { "min_stability": 30, "max_stability": 90, "required_turn": 5 },
+    "choices": [
+      {
+        "text": "Defend current allocation as economically sound, regardless of provincial complaints",
+        "outcome": "Federal priorities maintained but provincial governments become hostile. Supreme Court may rule against you.",
+        "is_constitutional": false,
+        "constitutional_implication": "May violate constitutional provisions for equitable development under Articles 59 and 274.",
+        "effects": { "stability": -15, "economy": 10, "morale": -10, "stress": 12 }
+      },
+      {
+        "text": "Revise budget allocation to address provincial concerns about equity",
+        "outcome": "Provinces appreciate fairness but some federal projects may be delayed. Constitutional compliance achieved.",
+        "is_constitutional": true,
+        "constitutional_implication": "Ensures equitable development as mandated by constitutional federalism principles.",
+        "effects": { "stability": 15, "economy": 5, "morale": 15, "stress": -5 }
+      },
+      {
+        "text": "Establish inter-governmental fiscal commission to resolve disputes systematically",
+        "outcome": "Long-term institutional solution that addresses root causes but requires time and political will from all levels.",
+        "is_constitutional": true,
+        "constitutional_implication": "Creates institutional framework for constitutional federalism implementation.",
+        "effects": { "stability": 20, "economy": 0, "morale": 10, "stress": -8 }
+      }
+    ]
+  }
+]
